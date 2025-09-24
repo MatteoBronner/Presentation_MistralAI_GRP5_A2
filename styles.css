@@ -1,17 +1,17 @@
 /* css pour la bar de nav pour le moment */
-.navbar {
-    gap=20px
+nav {
+    float : right;
+}
+nav a{
+    margin-right: 70px; 
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 0;
+ 
 }
 
-nav a {
-  margin-right: 70px; 
-  text-decoration: none;
-   font-weight: bold;
-
-  float: :right;
-   margin-left: 0;
-
- 
+header {
+    padding: 45px;
 }
 
 .P2_titre1 {
