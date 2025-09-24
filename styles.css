@@ -1,9 +1,4 @@
 /* css pour la bar de nav pour le moment */
-.navbar {
-
-    gap : 20px;
-}
-
 nav {
     float : right;
 }
@@ -19,4 +14,25 @@ header {
     padding: 45px;
 }
 
+.P2_titre1 {
+  float : left;
+  margin-left: 20px;
 
+}
+
+
+.P2_div1 { 
+  gap: 20px;
+  margin-right: 70px; 
+  float :  right;
+  margin-left : 0;
+  margin-top: 5%;
+  display: flex;
+}
+
+.P2_div1 > img {
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
