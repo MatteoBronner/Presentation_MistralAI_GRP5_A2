@@ -1,21 +1,8 @@
 /* css pour la bar de nav pour le moment */
 .navbar {
-<<<<<<< HEAD
-    gap : 20px
+
+    gap : 20px;
 }
-
-nav a {
-  margin-right: 70px; 
-  text-decoration : none;
-   font-weight : bold;
-
-  float :right ;
-   margin-left: 0;
-=======
-    gap:20px;
-}
-
->>>>>>> d870735f2deb45c732eb9d1910034409ac389113
 
 nav {
     float : right;
