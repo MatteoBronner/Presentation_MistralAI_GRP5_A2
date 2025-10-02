@@ -48,3 +48,25 @@ header {
   margin-left: 5%;
   margin-right: 5%;
 }
+
+.IndexText1 {
+  float: right;
+}
+
+.carousel1 {
+  text-align: center;
+}
+
+.IndexCartePage {
+  text-align: center;
+}
+
+.IndexTable {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.carousel2 {
+  text-align: center;
+}
