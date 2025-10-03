@@ -45,11 +45,14 @@
     color: black;  
     font-weight: normal; 
     transition: transform 0.3s;
+    transition: box-shadow 0.3s ease;
 
 }
 
 .carte:hover {
     transform: scale(1.05);
+    box-shadow: 13px 8px 8px #f45D05;
+
 }
 
 .img_produit {
