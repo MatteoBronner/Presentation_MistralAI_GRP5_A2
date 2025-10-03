@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,39 +13,67 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <a href="index.html">Menu</a>
-            <a href="page1.html">Page1</a>
-            <a href="page2.html">Page2</a>
-            <a href="page3.html">Page3</a>
-            <a href="page4.html">Page4</a>
-        </ul>
-    </nav>
+    <header>
+
+        <nav class="navbar fixed-top navbar-expand-lg ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img class = "img-nav" src="icon.png" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="nav navbar-nav justify-content-end justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link nav-active" aria-current="page" href="page1.html">Présentation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="page2.html">croissance</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="page3.html">Produits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="page4.html">Environnement</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <hr>
+    </header>
 
     <h1>Page 1</h1>
 
     <p>
-        Mistral AI est une entreprise française fondée en avril 2023 par Arthur Mensch, Guillaume Lample et Timothée Lacroix, 
-        anciens chercheurs de DeepMind et Meta. Spécialisée dans l’intelligence artificielle générative, 
-        elle développe des modèles de langage open source et propriétaires. Basée à Paris, avec des bureaux à Londres, Palo Alto et Singapour, 
+        Mistral AI est une entreprise française fondée en avril 2023 par Arthur Mensch, Guillaume Lample et Timothée
+        Lacroix,
+        anciens chercheurs de DeepMind et Meta. Spécialisée dans l’intelligence artificielle générative,
+        elle développe des modèles de langage open source et propriétaires. Basée à Paris, avec des bureaux à Londres,
+        Palo Alto et Singapour,
         elle est devenue en 2025 la société d’IA la plus valorisée d’Europe (11,7 Mds €).
         <br>
-        Elle a levé plus d’1 Md€ en deux ans, grâce à des investisseurs comme Microsoft, NVIDIA, ASML, Andreessen Horowitz et General Catalyst. 
-        Ses modèles phares incluent Mistral 7B, Mixtral, Codestral (IA pour le code), Pixtral (multimodal), et les modèles légers Ministral.
+        Elle a levé plus d’1 Md€ en deux ans, grâce à des investisseurs comme Microsoft, NVIDIA, ASML, Andreessen
+        Horowitz et General Catalyst.
+        Ses modèles phares incluent Mistral 7B, Mixtral, Codestral (IA pour le code), Pixtral (multimodal), et les
+        modèles légers Ministral.
         <br>
-        En février 2024, Mistral lance son chatbot Le Chat, enrichi depuis de fonctions avancées (images, recherche web, Canvas collaboratif). 
-        Une version professionnelle, Le Chat Enterprise, est proposée aux entreprises. 
-        L’entreprise mise sur une stratégie hybride : open source pour la recherche et modèles propriétaires pour les usages commerciaux.
+        En février 2024, Mistral lance son chatbot Le Chat, enrichi depuis de fonctions avancées (images, recherche web,
+        Canvas collaboratif).
+        Une version professionnelle, Le Chat Enterprise, est proposée aux entreprises.
+        L’entreprise mise sur une stratégie hybride : open source pour la recherche et modèles propriétaires pour les
+        usages commerciaux.
         <br>
-        Ses partenariats stratégiques (Microsoft, AFP, CMA CGM, ASML) visent à développer des applications pour les gouvernements, 
-        la logistique, les médias et les semi-conducteurs. Forte de son indépendance technologique et de son ouverture, 
+        Ses partenariats stratégiques (Microsoft, AFP, CMA CGM, ASML) visent à développer des applications pour les
+        gouvernements,
+        la logistique, les médias et les semi-conducteurs. Forte de son indépendance technologique et de son ouverture,
         Mistral s’impose comme le champion européen de l’IA générative.
- </p>
+    </p>
 
     <footer>
         Ecrit par Mattéo BRONNER
     </footer>
     <script src="bootstrap/js/bootstrap.js"></script>
 </body>
+
 </html>

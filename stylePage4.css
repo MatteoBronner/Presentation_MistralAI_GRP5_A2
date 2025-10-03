@@ -1,12 +1,28 @@
-div {
+.container {
     margin-top: 35px;
 }
 
-h1 {
-    margin-top: 70px
+.contenu {
+    text-align: left;
+    margin-left: 20px;
 }
 
-footer>p {
+.contenu img {
     float: right;
-    margin-right: 60px;
 }
+
+.container {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      gap: 20px;
+    }
+
+    .texte p {
+      margin-bottom: 20px;
+    }
+
+    .image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
