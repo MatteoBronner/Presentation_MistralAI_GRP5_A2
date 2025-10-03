@@ -28,9 +28,10 @@ Grâce a ce site nous pourrons comprendre l'impact global de Mistral en France e
 
 ## Choix de conception  
 
-Pour la conception du site, nous nous sommes grandement inspirés du site officiel de Mistral AI (disponible [Mistral AI](https://mistral.ai/fr)) en raison de son ésthétique original et agréable, du site du gouvernement français notamment a cause de la manière dont ce site utilise de nombreuses zones de présentation pratiques (encadrés, rubriques, bannières), en particulier sur sa page d’accueil.([info.gouv](https://www.info.gouv.fr)) 
-Le site de [Wagtail](https://wagtail.org) et le site [Ouworlindata](https://ourworldindata.org) nous ont beaucoup inspirés sur la mise en page des informations dans le contenu des pages et pour la représentation des données économiques.
-Nous avons créé une charte graphique pour notre site que vous pouvez retrouver [ici](doc/5_COLOMBAINLili_StyleTile.pdf) (en attente des réponses du questionnaire n°2).
+Pour la conception du site, nous nous sommes grandement inspirés du site officiel de [Mistral AI](https://mistral.ai/fr) en raison de son ésthétique original et plaisante.
+De plus, le site du gouvernement français ([info.gouv](https://www.info.gouv.fr)) a influencé notre approche, notamment par son utilisation efficace de zones de présentation pratiques (encadrés, rubriques, bannières), particulièrement visibles sur sa page d'accueil.
+Pour la mise en page des informations et la représentation des données économiques dans le contenu des pages, nous nous sommes basés sur les designs de [Wagtail](https://wagtail.org) et [Ouworlindata](https://ourworldindata.org).
+Enfin, nous avons créé une charte graphique pour notre site que vous pouvez retrouver [ici](doc/5_COLOMBAINLili_StyleTile.pdf) (en attente des réponses du questionnaire n°2).
 
 ## Répartition du travail
 
