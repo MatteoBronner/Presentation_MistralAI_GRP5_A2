@@ -10,7 +10,7 @@
     height: auto;
     margin-top: 1%;
     margin-bottom: 3%;
-    background-color: gray;
+    background-color: white;
     border-radius: 5px;
 
     position: relative;
@@ -19,18 +19,38 @@
 
 }
 
-.carte {
-    display: flex;
-    flex-direction: row;
-
-    flex-wrap: wrap;
-
-    background-color: bisque;
-    width: 95%;
+.lien_carte {
     height: auto;
+    text-decoration: none; 
+    color: black;  
+    font-weight: normal; 
 }
 
+.carte {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px #f45D05;
+
+    margin: 3%;
+    padding: 1%;
+
+    background-color: #f8bb02;
+    width: 95%;
+
+    height: auto;
+    text-decoration: none; 
+    color: black;  
+    font-weight: normal; 
+    transition: transform 0.3s;
+
+}
+
+.carte:hover {
+    transform: scale(1.05);
+}
 
 .img_produit {
     max-width: 450px;
@@ -42,36 +62,72 @@
 }
 
 
+
 #popUpProduit {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 98;
     display: flex;
     align-items: center;
     justify-content: center;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
+#popUpProduit.open {
+    opacity: 1;
+    visibility: visible;
 }
 
 .popUp {
-    max-height: 600px;
+    position: relative;
+    max-height: 80vh;
     width: 50%;
     padding: 30px;
     box-sizing: border-box;
-    background-color: beige;
+    background: #fffbea;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
 }
 
-#popUpProduit.open {
-    display: block !important;
+#popUpProduit.open .popUp {
+    transform: scale(1);
 }
 
 
 
 .popupExit {
     position: absolute;
-    right: 0;
-    top: 0;
+    top: 15px;
+    right: 15px;
+    background: crimson;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.popupExit:hover {
+    background: darkred;
+}
+
+/* --- Responsive mobile --- */
+@media (max-width: 768px) {
+    .popUp {
+        width: 90%;
+        padding: 20px;
+    }
 }
