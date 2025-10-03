@@ -1,3 +1,5 @@
+
+
 .container {
     margin-top: 35px;
 }
@@ -12,17 +14,24 @@
 }
 
 .container {
-      display: grid;
-      grid-template-columns: 50% 50%;
-      gap: 20px;
-    }
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 20px;
+}
 
-    .texte p {
-      margin-bottom: 20px;
-    }
+.texte p {
+  margin-bottom: 20px;
+}
 
-    .image img {
-      width: 100%;
-      border-radius: 10px;
-    }
+.image img {
+  width: 100%;
+  border-radius: 10px;
+}
 
+.imgParti1 {
+  width: 100%;       /* l'image prend toute la largeur disponible */
+  max-width: 500px;  /* limite la largeur maximale */
+  height: auto;      /* conserve les proportions */
+  border-radius: 10px;
+  object-fit: cover; /* utile si tu fixes height */
+}

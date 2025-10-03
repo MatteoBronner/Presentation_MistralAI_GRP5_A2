@@ -5,3 +5,10 @@ html, body {
 .container py-5 {
     background-color: aqua;
 }
+
+
+.imgParti1 {
+    height: 200px;
+    object-fit: cover; 
+    width: 100%;
+}
