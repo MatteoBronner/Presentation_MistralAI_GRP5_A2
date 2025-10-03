@@ -49,8 +49,36 @@ header {
   margin-right: 5%;
 }
 
-.IndexText1 {
-  float: right;
+.IndexText {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  gap: 150px;
+}
+
+.IndexText1, .IndexText2 {
+  align-self: center;
+  position: relative;
+  border: solid;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 400px;
+}
+
+.text1Img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  transform: translate(150%, 80%);
+}
+
+.text2Img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  transform: translate(-155%, -81%);
 }
 
 .carousel1 {
@@ -63,10 +91,7 @@ header {
 
 .IndexTable {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  padding: 10px;
-}
-
-.carousel2 {
-  text-align: center;
+  justify-content: space-between;
 }
