@@ -1,0 +1,51 @@
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    margin: 10px;
+}
+
+.TextPage1 {
+    display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 10px;
+}
+
+.zoneDroite {
+   margin-left: 40%;
+}
+
+.zoneTextDroite {
+    float: right;
+    margin-right: 5px;
+
+    border: solid 3px;
+    border-radius: 5px;
+    padding: 5px;
+
+    max-width: 500px;
+}
+
+.TextPage1 img {
+    float: left;
+    margin: 10px;
+}
+
+.zoneGauche {
+   margin-left: 10px;
+}
+
+.zoneTextGauche {
+    float: left;
+    margin-right: 5px;
+
+    border: solid 3px;
+    border-radius: 5px;
+    padding: 5px;
+
+    max-width: 500px;
+}
