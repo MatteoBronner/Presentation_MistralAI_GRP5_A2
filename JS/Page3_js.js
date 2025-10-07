@@ -22,3 +22,8 @@ function TogglePopUp5(){
     let popup = document.querySelector("#popUpProduit5");
     popup.classList.toggle("open")
 }
+
+function TogglePopUp6(){
+    let popup = document.querySelector("#popUpProduit5");
+    popup.classList.toggle("open")
+}
