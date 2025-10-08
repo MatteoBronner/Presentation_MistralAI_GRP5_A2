@@ -1,78 +1,100 @@
+
 .produit_page3 {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 5%;
-
+    gap: 1%;
     width: 100%;
-    height: auto;
-    margin-top: 1%;
-    margin-bottom: 3%;
+    margin: 1% 0 3%;
     background-color: white;
     border-radius: 5px;
 
-    position: relative;
-    top: 0;
-    left: 0;
 
 }
 
+
 .lien_carte {
-    height: auto;
+
     text-decoration: none;
     color: black;
     font-weight: normal;
 }
 
 .carte {
+    position: relative;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-
-    border-radius: 10px;
-    box-shadow: 10px 5px 5px #f45D05;
-
-    margin: 3%;
-    padding: 1%;
+    align-items: center;
 
     background-color: #f8bb02;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(244, 93, 5, 0.4);
+    padding: 1%;
+    margin: 3%;
     width: 95%;
+    cursor: pointer;
 
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.carte img {
+    width: 100%;
     height: auto;
-    text-decoration: none;
-    color: black;
-    font-weight: normal;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+.card-body {
+    padding: 10px;
+    text-align: center;
+}
+
+.card-title {
+    color: #f45d05;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
 
 
-    transition: box-shadow 0.3s ease, transform 0.3s;
-
+.carte_hover_info {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
 }
 
 .carte:hover {
     transform: scale(1.05);
-    box-shadow: 13px 8px 8px #f45D05;
-
+    box-shadow: 10px 10px 20px rgba(244, 93, 5, 0.6);
 }
 
-.img_produit {
-    max-width: 450px;
-    max-width: auto;
+.carte:hover img {
+    transform: scale(1.05);
 }
 
-.titre_produit {
-    padding-left: 50%;
+.carte:hover .carte_hover_info {
+    opacity: 1;
+    max-height: 200px;
 }
 
+.carte_hover_info .btn {
+    font-weight: 600;
+    border: none;
+    background-color: #f45d05;
+    color: white;
+    transition: background-color 0.3s ease;
+}
 
-
-
+.carte_hover_info .btn:hover {
+    background-color: #c23e00;
+}
 
 .titre1 {
-    color: #f45D05;
+    color: #f45d05;
 }
-
 
 .titre1:hover {
     color: #f8bb02;
@@ -83,100 +105,21 @@
 }
 
 
-
-.carte {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  background-color: #f8bb02;
-  box-shadow: 5px 5px 10px rgba(244, 93, 5, 0.4);
-  transition: all 0.4s ease;
-  cursor: pointer;
-}
-
-.inner_carte {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.carte img {
-  width: 100%;
-  height: auto;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  transition: transform 0.4s ease;
-}
-
-.card-body {
-  padding: 10px;
-  text-align: center;
-}
-
-.card-title {
-  color: #f45d05;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-
-.carte_hover_info {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.4s ease;
-}
-
-.carte:hover {
-  transform: scale(1.05);
-  box-shadow: 10px 10px 20px rgba(244, 93, 5, 0.6);
-}
-
-.carte:hover img {
-  transform: scale(1.05);
-}
-
-.carte:hover .carte_hover_info {
-  opacity: 1;
-  max-height: 200px; 
-}
-
-.carte_hover_info .btn {
-  font-weight: 600;
-  border: none;
-  background-color: #f45d05;
-  color: white;
-  transition: background-color 0.3s ease;
-}
-
-.carte_hover_info .btn:hover {
-  background-color: #c23e00;
-}
-
-
-@media (max-width: 768px) {
-  .carte {
-    transform: none !important;
-  }
-  .carte_hover_info {
-    opacity: 1;
-    max-height: none;
-  }
-}
-
 [id^="popUpProduit"] {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    backdrop-filter: blur(4px); 
-    background-color: rgba(0, 0, 0, 0.4); 
-    z-index: 98;
+
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 98;
 
     opacity: 0;
     visibility: hidden;
@@ -190,8 +133,9 @@
 
 .popUp {
     position: relative;
-    max-height: 80vh;
     width: 50%;
+    max-height: 80vh;
+
     padding: 35px;
     box-sizing: border-box;
 
@@ -213,18 +157,19 @@
     opacity: 1;
 }
 
+
 .popupExit {
     position: absolute;
     top: 15px;
     right: 15px;
-    background:  #f45d05;
-    color: rgb(255, 0, 0);
+    background: #f45d05;
+    color: white;
     border: none;
     padding: 8px 14px;
     border-radius: 8px;
     font-size: 14px;
-    text-decoration: none;
-    cursor: pointer;
+
+  
     transition: transform 0.2s ease, background 0.3s ease;
 }
 
@@ -233,7 +178,8 @@
     background: linear-gradient(135deg, #ff6f2c, #f45d05);
 }
 
-/* --- Texte --- */
+
+
 .popUp h1 {
     color: #f45d05;
     margin-bottom: 15px;
@@ -250,8 +196,15 @@
     text-decoration: underline;
 }
 
-/* --- Responsive (mobile) --- */
+
 @media (max-width: 768px) {
+    .carte {
+        transform: none !important;
+    }
+    .carte_hover_info {
+        opacity: 1;
+        max-height: none;
+    }
     .popUp {
         width: 90%;
         padding: 25px;
