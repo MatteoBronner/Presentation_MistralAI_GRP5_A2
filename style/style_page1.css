@@ -3,7 +3,11 @@ html {
 }
 
 h1 {
-    margin: 10px;
+    margin: 20px;
+}
+
+h2 {
+    margin: 20px;
 }
 
 .TextPage1 {
@@ -48,4 +52,49 @@ h1 {
     padding: 5px;
 
     max-width: 500px;
+}
+
+.imgFondateur {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.fondateur {
+    position: relative;
+    margin: 30px;
+}
+
+.fondateur img{
+    position: relative;
+    margin: 30px;
+}
+
+.hiddenLink {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    transform: translate(50%, -300%);
+}
+
+.hiddenLink:hover {
+    opacity: 1;
+}
+
+.textFondateur {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    max-width: 200px;
+    transform: translate(15%, 50%);
+
+    border: solid 5px;
+    border-radius: 5px;
 }
