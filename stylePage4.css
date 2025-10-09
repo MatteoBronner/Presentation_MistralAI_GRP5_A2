@@ -1,4 +1,3 @@
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -48,74 +47,56 @@ p {
   line-height: 1.6;
   color: #333;
 }
-  .clickable-image {
-    width: 300px;
-    cursor: pointer;
-    transition: transform 0.3s;
-    margin: 20px;
-  }
-  .clickable-image:hover {
-    transform: scale(1.05);
-  }
-
-
-  .modal {
-    display: none; 
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    justify-content: center;
-    align-items: center;
-  }
-
-  
-  .modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 400px;
-    text-align: center;
-    position: relative;
-  }
-
-
-  .close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #aaa;
-  }
-  .close:hover {
-    color: black;
-  }
-
-  
-  .modal:target {
-    display: flex; 
-  }
-
-@media (max-width: 768px) {
-  .row {
-    flex-direction: column;
-  }
-
-  .image-col,
-  .text-col {
-    flex: 1 1 100%;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
+.clickable-image {
+  width: 300px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin: 20px;
 }
+.clickable-image:hover {
+  transform: scale(1.05);
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #aaa;
+}
+.close:hover {
+  color: black;
+}
+
+.modal:target {
+  display: flex; 
+}
+
 #images-multiples .container {
   display: flex;
   justify-content: space-between;  
@@ -126,7 +107,6 @@ p {
   padding: 2rem 1rem;
 }
 
-
 .img-gauche,
 .img-droite {
   width: 350px;
@@ -134,7 +114,6 @@ p {
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  
 }
 
 .img-centre {
@@ -142,7 +121,6 @@ p {
   height: 350px;
   border-radius: 12px;
   margin: 0 auto;
-  transition: transform 0.3s;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -153,6 +131,61 @@ p {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
+
+#image-decale {
+    width: 100%;
+    padding: 40px 0;
+   
+}
+
+#image-decale .image-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+#image-decale .image-wrapper img {
+    width: 48%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+#image-decale .image-wrapper img:hover {
+    transform: scale(1.05);
+}
+
+.text2 {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #4a2c00; 
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    #image-decale .image-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #image-decale .image-wrapper img {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
 .text {
   max-width: 800px;
   margin: 2rem auto;
@@ -160,7 +193,7 @@ p {
   text-align: center;
   font-family: 'Arial', sans-serif;
   color: #4a2c00; 
- border-radius: 12px;
+  border-radius: 12px;
 }
 
 .text p:first-of-type {
@@ -182,17 +215,6 @@ p {
   font-size: 1rem;
   line-height: 1.6;
   color: #a35c1a; 
-}
-
-
-
-
-@media (max-width: 768px) {
-  #images-multiples .container {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
 }
 
 .carousel1 {
@@ -240,35 +262,16 @@ p {
   font-size: 1.05rem;
 }
 
-
 .carousel-control-prev,
 .carousel-control-next {
   top: 50%;
   transform: translateY(-50%);
 }
 
-
-@media (max-width: 768px) {
-  .carousel-slide {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px;
-  }
-
-  .carousel-slide img {
-    margin-bottom: 20px;
-  }
-}
-
-
-
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
 :root{
   --text:#1f3d2e;
   --muted:#6b6b6b;
 }
-
 
 body {
   background: linear-gradient(145deg, #f6f8f9, #eaeff2);
@@ -276,7 +279,6 @@ body {
   font-family: 'Poppins', sans-serif;
   color: var(--text);
 }
-
 
 .page-head { text-align:center; margin-bottom:18px; }
 h2 {
@@ -290,7 +292,6 @@ h2 {
   font-size:0.95rem;
 }
 
-
 .progress-container {
   display:flex;
   justify-content:center;
@@ -298,7 +299,6 @@ h2 {
   flex-wrap:wrap;
   margin-top: 18px;
 }
-
 
 .progress-group{
   width: 30%;
@@ -308,13 +308,11 @@ h2 {
   padding:24px;
   box-shadow:0 10px 22px rgba(0,0,0,0.06);
   border:1px solid rgba(0,0,0,0.03);
- 
 }
 .progress-group:hover{
   box-shadow:0 18px 38px rgba(0,0,0,0.09);
   transform: translateY(-6px);
 }
-
 
 .progress-label{
   text-align:center;
@@ -323,14 +321,12 @@ h2 {
   font-size:1.15rem;
 }
 
-
 .progress-row{
   display:flex;
   align-items:center;
   gap:12px;
   margin-bottom:14px;
 }
-
 
 .progress{
   flex:1;
@@ -341,7 +337,6 @@ h2 {
   position:relative;
   box-shadow: inset 0 1px 3px rgba(0,0,0,0.04);
 }
-
 
 .progress-bar-custom{
   height:100%;
@@ -355,7 +350,6 @@ h2 {
   border-radius:12px 0 0 12px;
   position:relative;
 }
-
 
 .progress-bar-custom:hover::after{
   content: attr(data-tooltip);
@@ -372,7 +366,6 @@ h2 {
   z-index:30;
 }
 
-
 .value-text{
   width:170px;
   text-align:right;
@@ -381,9 +374,7 @@ h2 {
   font-weight:600;
 }
 
-
 .nd-value{ color:#8a8a8a; font-weight:700; }
-
 
 .nd-label{
   position:absolute;
@@ -396,7 +387,6 @@ h2 {
   letter-spacing:0.2px;
   pointer-events:none;
 }
-
 
 .legend{
   display:flex;
@@ -414,15 +404,141 @@ h2 {
   box-shadow:0 1px 3px rgba(0,0,0,0.08);
 }
 
-
 .bg-co2 { background: linear-gradient(90deg,#ffb066,#ff8c3a); border-right:2px solid #ffb066; }
 .bg-water { background: linear-gradient(90deg,#86f0bf,#34d399); border-right:2px solid #86f0bf; }
 .bg-energy{ background: linear-gradient(90deg,#ffd27f,#ffb347); border-right:2px solid #ffd27f; }
 
-
-.footnote{
-  text-align:center;
-  margin-top:18px;
-  color:var(--muted);
-  font-size:0.88rem;
+footer.footer-bandes {
+  position: relative;
+  width: 100%;
+  height: 200px; 
+ 
+  overflow: hidden;
+  text-align: center;
+  font-family: Arial, sans-serif;
 }
+
+footer .band {
+  width: 100%;
+  height: 20%;
+}
+
+footer .footer-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+footer .footer-content a,
+footer .footer-content p {
+  color: white;
+  text-decoration: none;
+}
+
+footer .footer-content a:hover {
+  text-decoration: underline;
+}
+
+footer .footer-content img {
+  width: 35px;
+  vertical-align: middle;
+
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+}
+
+
+@media (max-width: 768px) {
+  footer.footer-bandes {
+    height: 150px;
+  }
+  footer .footer-content {
+    font-size: 0.9rem;
+  }
+  footer .footer-content img {
+    width: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .image-col,
+  .text-col {
+    flex: 1 1 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #images-multiples .container {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .carousel-slide {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .carousel-slide img {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p, .text p, .carousel-text p {
+    font-size: 0.95rem;
+  }
+
+  .container, #images-multiples .container {
+    padding: 20px 10px;
+  }
+
+  .image-col img,
+  .img-gauche,
+  .img-centre,
+  .img-droite,
+  .carousel-slide img {
+    width: 100%;
+    height: auto;
+  }
+
+  .clickable-image {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .progress-group {
+    width: 100%;
+    min-width: auto;
+    padding: 16px;
+  }
+
+  .progress-label, .value-text {
+    font-size: 0.9rem;
+  }
+}
+
