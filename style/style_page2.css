@@ -4,11 +4,72 @@ html, body {
 
 .container py-5 {
     background-color: aqua;
+    
+}
+
+.text-centre{
+    margin-top: 100px;
+}
+
+.frise{
+    margin-top: 200px;
+}
+
+.imgParti1 {
+    height: 400px;
+    object-fit: cover; 
+    width: 100%;
+}
+
+.texte1{
+    margin-top:50px;
+}
+
+.horizontal-timeline .items {
+  border-top: 3px solid #e9ecef;
+}
+
+.horizontal-timeline .items .items-list {
+  display: block;
+  position: relative;
+  text-align: center;
+  padding-top: 70px;
+  margin-right: 0;
+}
+
+.horizontal-timeline .items .items-list:before {
+  content: "";
+  position: absolute;
+  height: 36px;
+  border-right: 2px dashed #dee2e6;
+  top: 0;
+}
+
+.horizontal-timeline .items .items-list .event-date {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  right: 0;
+  width: 75px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  padding-top: 8px;
+}
+
+@media (min-width: 1140px) {
+  .horizontal-timeline .items .items-list {
+    display: inline-block;
+    width: 24%;
+    padding-top: 45px;
+  }
+
+  .horizontal-timeline .items .items-list .event-date {
+    top: -40px;
+  }
 }
 
 
-.imgParti1 {
-    height: 200px;
-    object-fit: cover; 
-    width: 100%;
+footer {
+    background-color: #e78045;
+    padding-bottom: 60px;
 }
