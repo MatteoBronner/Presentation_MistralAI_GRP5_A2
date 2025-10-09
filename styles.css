@@ -1,4 +1,10 @@
+html, body {
+  background-color: #FFFEF9;
+}
+
 /* css pour la bar de nav pour le moment */
+
+
 header hr {
   margin-top: 10px;
   display: block;
