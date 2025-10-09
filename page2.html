@@ -235,11 +235,71 @@
     </div>
 
 
-    <footer>
-        <hr>
-        <p> @ Ecrit par Lili COLOMBAIN</p>
-        <a href="#"> revenir en haut de page</a>
-        <a href="index.html"><img src="icon.png" alt="notre icon"></a>
+    <div class="melange">
+        <canvas id="myChartfusion" style="width:100%;max-width:700px"></canvas>
+        <script>
+            var xValues = ["Juin - 2023", "Décembre - 2023", "Juin - 2024", "Septembre - 2025"];
+
+            var yValues = [105, 385, 600, 1700];
+
+            var barColors = ["red", "purple", "blue", "orange", "brown"];
+
+
+            new Chart("myChartfusion", {
+                type: "bar",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                    }]
+                },
+                options: {
+                    legend: { display: false },
+                    title: {
+                        display: true,
+                        text: "Levées de fonds de Mistral ai"
+                    }
+                }
+            });
+        </script>
+    </div>
+
+
+    <div class="text">
+        <p><strong>_Des partenaires et investisseurs stratégiques_</strong></p>
+        <h2><strong>« Un réseau qualitatif les guys »</strong></h2>
+        <p>L’intelligence artificielle transforme profondément notre quotidien,
+            mais son développement et son utilisation génèrent une empreinte écologique
+            liée à la consommation d’énergie,
+            d’eau et de ressources, que nous allons explorer à travers le cas des modèles de Mistral.</p>
+    </div>
+
+
+    <img src="bpi.png" alt="image-bpi">
+
+
+
+
+
+
+
+
+
+    <footer class="footer-bandes">
+
+        <div class="band" style="background-color:#ff8c3a;"></div>
+        <div class="band" style="background-color:#ff9f57;"></div>
+        <div class="band" style="background-color:#ffb066;"></div>
+        <div class="band" style="background-color:#ffc680;"></div>
+        <div class="band" style="background-color:#ffd27f;"></div>
+        <div class="footercontent">
+            <hr>
+            <p> @ Ecrit par Lili COLOMBAIN</p>
+            <a href="#"> revenir en haut de page</a>
+            <a href="index.html"><img src="icon.png" alt="notre icon"></a>
+        </div>
+
     </footer>
 
 
