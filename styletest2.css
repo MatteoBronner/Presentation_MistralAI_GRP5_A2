@@ -170,7 +170,7 @@ footer {
   display:flex;
   justify-content: space-between;
   
-  margin-top: 100px;
+  margin-top: 200px;
   
 }
 
@@ -238,4 +238,129 @@ footer .footer-content img {
 footer {
   margin: 0;
   padding: 0;
+}
+
+.footercontent {
+    z-index: 2;
+}
+
+.bandeau-trans {
+    padding: 30px;
+    background-color: grey;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    margin-right: 60%;
+    margin-top: 100px;
+}
+
+.constellation-container{
+    width: 100%;
+    height: 600px;
+    margin-top: 130px;
+    background-color: pink;
+    display: flex;
+    align-content: space-between;
+    flex-direction: row;
+}
+
+.eltetoile {
+    padding: 25px;
+    width: 15%;
+    background-color: black;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.container {
+    display: flex; /* Active Flexbox pour aligner les enfants */
+    align-items: center; /* Centre verticalement les éléments */
+    justify-content: center; /* Centre horizontalement les éléments */
+    max-width: 1300px; /* Limite la largeur du conteneur pour mieux visualiser */
+    margin: 50px auto; /* Centre le conteneur sur la page */
+    padding: 20px;
+   
+    gap: 100px; /* Ajoute un espace entre les éléments (le chiffre et les blocs de texte) */
+}
+
+.number {
+    /* Le chiffre au centre */
+    font-size: 8em; /* Très grande taille de police */
+    font-weight: bold;
+    color: #007bff; /* Une petite touche de couleur */
+    flex-shrink: 0; /* Empêche le chiffre de rétrécir si l'espace manque */
+}
+
+.text-block {
+    /* Les blocs de texte à gauche et à droite */
+    flex: 1; /* Permet aux blocs de prendre l'espace disponible de manière égale */
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+.text-block h1 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+
+
+.carousel1 {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.carousel-inner {
+  min-height: 450px; 
+  display: flex;
+  align-items: center; 
+}
+
+.carousel-slide {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: linear-gradient(135deg, #f0f4ff, #d9e4ff); 
+  padding: 50px; 
+  border-radius: 25px; 
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+  transition: transform 0.5s ease; 
+}
+
+.carousel-slide img {
+  width: 220px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.carousel-text h2 {
+  margin-bottom: 15px;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.carousel-text p {
+  margin-bottom: 0;
+  color: #333333;
+  font-size: 1.05rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.partenaires-defilent{
+    padding: 50px;
+    width: 100%;
+    background-color: orange;
 }
