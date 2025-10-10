@@ -59,7 +59,7 @@ header {
   display: flex;
   flex-direction: column;
   margin: 30px;
-  gap: 150px;
+  gap: 300px;
 }
 
 .IndexText1, .IndexText2 {
@@ -100,6 +100,18 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+
+.btnIndex {
+  text-decoration: none;
+  background-color: #F45D05;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.btnIndex:hover {
+  background-color: #d65104;
 }
 
 footer img {
