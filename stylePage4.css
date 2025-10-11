@@ -264,7 +264,6 @@ p {
 
 body {
   background: linear-gradient(145deg, #f6f8f9, #eaeff2);
-  padding: 48px;
   font-family: 'Poppins', sans-serif;
   color: var(--text);
 }
@@ -456,17 +455,23 @@ h2 {
 
 footer.footer-bandes {
   position: relative;
-  width: 100%;
-  height: 200px; 
- 
+  width: 100vw;
+  height: 200px;
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%);
   overflow: hidden;
   text-align: center;
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: none;
 }
 
 footer .band {
   width: 100%;
   height: 20%;
+  display: block;
 }
 
 footer .footer-content {
@@ -490,12 +495,6 @@ footer .footer-content a:hover {
 footer .footer-content img {
   width: 35px;
   vertical-align: middle;
-
-}
-
-footer {
-  margin: 0;
-  padding: 0;
 }
 
 
