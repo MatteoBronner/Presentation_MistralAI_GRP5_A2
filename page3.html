@@ -131,39 +131,28 @@
 
             <div class="graph-container">
                 <h4>Parts de marché en Europe (2025)</h4>
-                <div class="pie-chart-container">
-                    <svg class="pie-chart" viewBox="0 0 100 100">
-                        <!-- Fond du cercle (pour masquer les bords) -->
-                        <circle cx="50" cy="50" r="50" fill="#f8f9fa" />
-
-                        <!-- Mistral AI (28%) -->
-                        <path class="pie-slice" d="M50,50 L50,0 A50,50 0 0,1 73.6,26.4 Z" fill="#f45d05" />
-                        <text x="60" y="20" class="pie-label">28%</text>
-
-                        <!-- Aleph Alpha (36%) -->
-                        <path class="pie-slice" d="M50,50 L73.6,26.4 A50,50 0 0,1 89.1,46.4 Z" fill="#ff8c3a" />
-                        <text x="85" y="40" class="pie-label">36%</text>
-
-                        <!-- Hugging Face (22%) -->
-                        <path class="pie-slice" d="M50,50 L89.1,46.4 A50,50 0 0,1 73.6,73.6 Z" fill="#ffb066" />
-                        <text x="75" y="75" class="pie-label">22%</text>
-
-                        <!-- DeepL (14%) -->
-                        <path class="pie-slice" d="M50,50 L73.6,73.6 A50,50 0 0,1 50,100 Z" fill="#ffc680" />
-                        <text x="50" y="90" class="pie-label">14%</text>
-                    </svg>
-                </div>
+                <canvas id="pieChart" width="200" height="200"></canvas>
                 <div class="pie-legend">
-                    <div class="legend-item"><span class="legend-color" style="background-color: #f45d05;"></span>
-                        Mistral AI</div>
-                    <div class="legend-item"><span class="legend-color" style="background-color: #ff8c3a;"></span> Aleph
-                        Alpha</div>
-                    <div class="legend-item"><span class="legend-color" style="background-color: #ffb066;"></span>
-                        Hugging Face</div>
-                    <div class="legend-item"><span class="legend-color" style="background-color: #ffc680;"></span> DeepL
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #f45d05;"></span>
+                        Mistral AI
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #ff8c3a;"></span>
+                        Aleph Alpha
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #ffb066;"></span>
+                        Hugging Face
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #ffc680;"></span>
+                        DeepL
                     </div>
                 </div>
             </div>
+
+
 
 
 
@@ -238,31 +227,7 @@
                 <li>Coût élevé pour les déploiements à grande échelle.</li>
                 <li>Complexité d’intégration pour les petites entreprises.</li>
             </ul>
-            <div class="graph-container">
-                <h4>Langues supportées (nombre)</h4>
-                <div class="bar-graph">
-                    <div class="bar-wrapper">
-                        <div class="bar" style="height: 80%; background-color: #f45d05;" data-value="25"></div>
-                        <span class="bar-title">Anglais</span>
-                    </div>
-                    <div class="bar-wrapper">
-                        <div class="bar" style="height: 75%; background-color: #ff8c3a;" data-value="22"></div>
-                        <span class="bar-title">Français</span>
-                    </div>
-                    <div class="bar-wrapper">
-                        <div class="bar" style="height: 70%; background-color: #ffb066;" data-value="20"></div>
-                        <span class="bar-title">Allemand</span>
-                    </div>
-                    <div class="bar-wrapper">
-                        <div class="bar" style="height: 65%; background-color: #ffc680;" data-value="18"></div>
-                        <span class="bar-title">Espagnol</span>
-                    </div>
-                    <div class="bar-wrapper">
-                        <div class="bar" style="height: 60%; background-color: #ffd27f;" data-value="15"></div>
-                        <span class="bar-title">Italien</span>
-                    </div>
-                </div>
-            </div>
+
 
 
         </div>
@@ -366,22 +331,30 @@
                 <li>Moins connu que les modèles américains, limitant son adoption.</li>
             </ul>
             <div class="graph-container">
-                <h4>Vitesse de traitement (Tokens/s)</h4>
-                <div class="bar-graph">
-                    <div class="bar-wrapper">
-                        <div class="bar" style="height: 90%; background-color: #f45d05;" data-value="150"></div>
-                        <span class="bar-title">Mistral Small 3</span>
+                <h3>Vitesse de traitement (Tokens/s)</h3>
+                <div class="speed-graph">
+                    <div class="speed-item">
+                        <div class="speed-badge">150</div>
+                        <div class="speed-bar"
+                            style="width: 100%; background: linear-gradient(to right, #ff6b35, #ff8e53);"></div>
+                        <div class="speed-label">Mistral Small 3</div>
                     </div>
-                    <div class="bar-wrapper">
-                        <div class="bar" style="height: 70%; background-color: #ff8c3a;" data-value="110"></div>
-                        <span class="bar-title">Phi-2</span>
+                    <div class="speed-item">
+                        <div class="speed-badge">110</div>
+                        <div class="speed-bar"
+                            style="width: 73%; background: linear-gradient(to right, #ff8c3a, #ffb366);"></div>
+                        <div class="speed-label">Phi-2</div>
                     </div>
-                    <div class="bar-wrapper">
-                        <div class="bar" style="height: 60%; background-color: #ffb066;" data-value="90"></div>
-                        <span class="bar-title">TinyLlama</span>
+                    <div class="speed-item">
+                        <div class="speed-badge">90</div>
+                        <div class="speed-bar"
+                            style="width: 60%; background: linear-gradient(to right, #ffb066, #ffd199);"></div>
+                        <div class="speed-label">TinyLlama</div>
                     </div>
                 </div>
             </div>
+
+
 
 
 
@@ -397,7 +370,7 @@
     <!-- Mistral API -->
     <div class="container product-section">
         <div class="image-col">
-            <img src="style/images/mistral_api_placeholder.png" alt="Mistral API">
+            <img src="style/images/MistralAPI.svg" alt="Mistral API">
         </div>
         <div class="text-col">
             <h2>Mistral API</h2>
@@ -435,11 +408,14 @@
         <div class="band" style="background-color:#ffc680;"></div>
         <div class="band" style="background-color:#ffd27f;"></div>
 
-        <hr>
-        <p> @ Ecrit par Emile CAP</p>
-        <a href="#top">Revenir en haut de page</a>
-        <a href="index.html"><img src="icon.png" alt="notre icon"></a>
+        <div class="footer-content">
+            <p>© 2025 Emile CAP</p>
+            <a href="#">Revenir en haut de page</a>
+            <a href="index.html"><img src="icon.png" alt="Logo"></a>
+        </div>
     </footer>
+
+
     <script src="JS/JsPage3.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
 
