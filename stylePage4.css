@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  background-color: #ece1e1;
 }
 
 
@@ -251,11 +251,7 @@ p {
   font-size: 1.05rem;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  top: 50%;
-  transform: translateY(-50%);
-}
+
 
 :root{
   --text:#1f3d2e;
@@ -291,6 +287,7 @@ h2 {
   gap: 28px;
   flex-wrap: wrap;
   margin-top: 18px;
+  max-width: 1200px;
 }
 
 
