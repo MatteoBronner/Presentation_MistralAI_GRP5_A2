@@ -290,63 +290,6 @@ p {
 |           carte de présentation                 |
 \*-----------------------------------------------*/
 
-.IndexTable {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 60px; 
-  justify-content: center;
-  margin: 30px auto;     
-  padding-left: 200px;
-  padding-right: 200px;
-  padding-top: 0px;    
-}
-
-.IndexTable .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; 
-  width: 18rem;
-  min-height: 350px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  border-radius: 12px;
-  transition: transform 0.3s;
-}
-
-.IndexTable .card:hover {
-  transform: translateY(-5px);
-}
-
-.IndexTable .card-img-top {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
-
-.IndexTable .card-body {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1;
-}
-
-.IndexTable .card-title {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #ff8c3a;
-}
-
-.IndexTable .card-text {
-  font-size: 0.95rem;
-  line-height: 1.4;
-  color: #4a2c00;
-}
-
-/* ! ------ ! */
-/* === Structure générale === */
 .indexShowcase {
   display: flex;
   justify-content: center;
@@ -356,7 +299,6 @@ p {
   position: relative;
 }
 
-/* === Menu latéral === */
 .indexMenu {
   position: sticky;
   top: 100px;
@@ -386,7 +328,6 @@ p {
   padding-left: 6px;
 }
 
-/* === Cadre fixe (sans barre visible) === */
 .indexFrame {
   width: 900px;
   height: 520px;
@@ -403,13 +344,11 @@ p {
   display: none; /* Chrome/Safari */
 }
 
-/* === Conteneur des cartes === */
 .cards-container {
   display: flex;
   flex-direction: column;
 }
 
-/* === Cartes === */
 .cardItem {
   display: flex;
   align-items: center;
@@ -426,7 +365,6 @@ p {
   background: #fff7f0;
 }
 
-/* === Contenu texte === */
 .card-text {
   flex: 1;
   padding: 20px;
@@ -444,7 +382,6 @@ p {
   font-size: 1.1em;
 }
 
-/* === Image === */
 .card-img {
   flex: 1;
   display: flex;
