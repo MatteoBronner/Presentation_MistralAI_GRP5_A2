@@ -251,7 +251,11 @@ p {
   font-size: 1.05rem;
 }
 
-
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 :root{
   --text:#1f3d2e;
@@ -263,16 +267,6 @@ body {
   font-family: 'Poppins', sans-serif;
   color: var(--text);
 }
-.page-head { 
-  text-align: center; 
-  margin-bottom: 18px; 
-}
-
-h2 {
-  margin: 0 0 6px 0;
-  font-weight: 700;
-  font-size: 2.2rem;
-}
 
 .subtitle {
   margin: 0;
@@ -283,10 +277,10 @@ h2 {
 
 .progress-container {
   display: flex;
-  justify-content: center;
-  gap: 28px;
   flex-wrap: wrap;
-  margin-top: 18px;
+  gap: 30px;
+  justify-content: space-between;
+  margin: 50px auto;
   max-width: 1200px;
 }
 
