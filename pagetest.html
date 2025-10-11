@@ -3,6 +3,8 @@
 <html lang="fr">
 
 <head>
+
+
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,12 +22,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-    
-
     <title>Page 2 </title>
+
+
 </head>
 
 <body>
+
     <header>
         <nav class="navbar navbar-expand-md  fixed-top">
             <div class="container-fluid">
@@ -60,11 +63,11 @@
     </header>
 
 
-
+    <!-- Partie d'introduction -->
 
     <div class="container py-5">
-        <div class="row align-items-center g-4">
 
+        <div class="row align-items-center g-4">
 
             <div class="col-lg-7">
                 <h1 class="display-4 fw-bold text-dark mb-4">
@@ -82,6 +85,7 @@
             </div>
 
         </div>
+
     </div>
 
     <div class="text">
@@ -92,6 +96,9 @@
             liée à la consommation d’énergie,
             d’eau et de ressources, que nous allons explorer à travers le cas des modèles de Mistral.</p>
     </div>
+
+
+    <!-- Partie levées de fonds et valorisation -->
 
 
     <div class="bandeau-trans"></div>
@@ -162,7 +169,7 @@
 
     </div>
 
-    <div class="container container-chart">
+    <div class="container ">
         <div class=" chart-description">
             <h2>Des levées de fonds toujours plus importantes</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi mauris, pulvinar quis porta ut, malesuada
@@ -171,14 +178,90 @@
                 commodo at
                 ligula eget, congue mattis libero. Maecenas mollis,</p>
         </div>
-        <div class="col-lg-5">
-            <img src="imageplace.png" alt="image economie" class="img-fluid rounded-3 shadow-lg imgParti1">
+        <div class="monstyle">
+            <div class="myChartlevee"><canvas id="myChartlevee"></canvas></div></canvas>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+            <script>
+                const ctx = document.getElementById('myChartlevee');
+
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Juin - 2023', 'Septembre - 2023', 'Juin - 2024', 'Décembre - 2024'],
+                        datasets: [{
+                            label: "# Levées de fonds en million d'euros",
+                            data: [105, 385, 600, 1700],
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                            borderColor: 'rgb(255, 159, 64)',
+                            hoverBackgroundColor: 'rgba(255, 159, 64, 1)',
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        },
+                        title: {
+                            display: true,
+                            text: 'Montant des Levées de Fonds par Date',
+                            fontSize: 18,
+                            fontStyle: 'bold',
+                            fontColor: '#333'
+                        }
+                    }
+                });
+            </script>
+
+
+
         </div>
     </div>
 
     <div class="container container-chart">
-        <div class="col-lg-5">
-            <img src="imageplace.png" alt="image economie" class="img-fluid rounded-3 shadow-lg imgParti1">
+        <div class="monstyle">
+            <div class="myChartlevee"><canvas id="myChartval"></canvas></div></canvas>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+            <script>
+                const cty = document.getElementById('myChartval');
+
+                new Chart(cty, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Juin - 2023', 'Septembre - 2023', 'Juin - 2024', 'Décembre - 2024'],
+                        datasets: [{
+                            label: "# LValorisation en million d'euros",
+                            data: [240, 2000, 5800, 11700],
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                            borderColor: 'rgb(255, 159, 64)',
+                            hoverBackgroundColor: 'rgba(255, 159, 64, 1)',
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        },
+                        title: {
+                            display: true,
+                            text: 'Montant des Levées de Fonds par Date',
+                            fontSize: 18,
+                            fontStyle: 'bold',
+                            fontColor: '#333'
+                        }
+                    }
+                });
+            </script>
+
+
+
         </div>
         <div class="chart-description">
             <h2>Ainsi qu'une valorisation phénoménale</h2>
@@ -190,6 +273,8 @@
         </div>
     </div>
 
+
+    <!-- Partie Partenaires -->
 
     <div class="container constellation-container">
         <div>
@@ -226,7 +311,7 @@
 
 
     <div class="partenaires-defilent"></div>
-    
+
 
     <div class="container container-chart">
         <div class="col-lg-5">
@@ -242,59 +327,65 @@
         </div>
     </div>
 
+
+    <!-- Carousel de conclusion -->
+
+
     <section class="carousel1">
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
 
 
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-          aria-current="true"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></button>
-      </div>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></button>
+            </div>
 
 
-      <div class="carousel-inner text-center">
+            <div class="carousel-inner text-center">
 
-        <div class="carousel-item active">
-          <div class="carousel-content">
-            <h2>Bienvenue chez Mistral</h2>
-            <p>Découvrez nos projets innovants en intelligence artificielle et robotique médicale.</p>
-            <a href="#" class="btn btn-primary">En savoir plus</a>
-          </div>
+                <div class="carousel-item active">
+                    <div class="carousel-content">
+                        <h2>Bienvenue chez Mistral</h2>
+                        <p>Découvrez nos projets innovants en intelligence artificielle et robotique médicale.</p>
+                        <a href="#" class="btn btn-primary">En savoir plus</a>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <h2>Nos Fondateurs</h2>
+                        <p>Rencontrez les esprits derrière Mistral et leur vision pour un futur technologique.</p>
+                        <a href="#" class="btn btn-success">Découvrir</a>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <h2>Projets Publicitaires</h2>
+                        <p>Des campagnes créatives qui mettent en valeur notre innovation et nos solutions.</p>
+                        <a href="#" class="btn btn-warning">Voir les projets</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
         </div>
-
-        <div class="carousel-item">
-          <div class="carousel-content">
-            <h2>Nos Fondateurs</h2>
-            <p>Rencontrez les esprits derrière Mistral et leur vision pour un futur technologique.</p>
-            <a href="#" class="btn btn-success">Découvrir</a>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="carousel-content">
-            <h2>Projets Publicitaires</h2>
-            <p>Des campagnes créatives qui mettent en valeur notre innovation et nos solutions.</p>
-            <a href="#" class="btn btn-warning">Voir les projets</a>
-          </div>
-        </div>
-
-      </div>
-
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-
-    </div>
-  </section>
+    </section>
 
 
 
