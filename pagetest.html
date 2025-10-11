@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/gif" href="favicon2.ico" />
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="style/style_page2.css" rel="stylesheet">
+    <link href="styletest2.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +20,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    
 
     <title>Page 2 </title>
 </head>
@@ -58,7 +59,7 @@
         <hr>
     </header>
 
-    
+
 
 
     <div class="container py-5">
@@ -74,8 +75,7 @@
 
 
             <div class="col-lg-5">
-                <img src="style/images/economie.jpg" alt="image economie"
-                    class="img-fluid rounded-3 shadow-lg imgParti1">
+                <img src="imageplace.png" alt="image economie" class="img-fluid rounded-3 shadow-lg imgParti1">
             </div>
             <div class="row mt-4">
                 <br />
@@ -94,7 +94,7 @@
     </div>
 
 
-
+    <div class="bandeau-trans"></div>
 
     <div class="frise" class="container-fluid py-5">
 
@@ -171,60 +171,14 @@
                 commodo at
                 ligula eget, congue mattis libero. Maecenas mollis,</p>
         </div>
-        <div class="bar-chart">
-            <canvas id="myChart" style="width:100%;max-width:800px"></canvas>
-            <script>
-                var xValues = ["Juin - 2023", "Décembre - 2023", "Juin - 2024", "Septembre - 2025"];
-                var yValues = [105, 385, 600, 1700];
-                var barColors = ["red", "green", "blue", "orange", "brown"];
-
-                new Chart("myChart", {
-                    type: "bar",
-                    data: {
-                        labels: xValues,
-                        datasets: [{
-                            backgroundColor: barColors,
-                            data: yValues
-                        }]
-                    },
-                    options: {
-                        legend: { display: false },
-                        title: {
-                            display: true,
-                            text: "Levées de fonds de Mistral ai"
-                        }
-                    }
-                });
-            </script>
+        <div class="col-lg-5">
+            <img src="imageplace.png" alt="image economie" class="img-fluid rounded-3 shadow-lg imgParti1">
         </div>
     </div>
 
     <div class="container container-chart">
-        <div class="bar-chart">
-            <canvas id="myChart2" style="width:100%;max-width:800px"></canvas>
-            <script>
-                var xValues = ["Juin - 2023", "Décembre - 2023", "Juin - 2024", "Septembre - 2025"];
-                var yValues = [105, 385, 600, 1700];
-                var barColors = ["red", "green", "blue", "orange", "brown"];
-
-                new Chart("myChart2", {
-                    type: "bar",
-                    data: {
-                        labels: xValues,
-                        datasets: [{
-                            backgroundColor: barColors,
-                            data: yValues
-                        }]
-                    },
-                    options: {
-                        legend: { display: false },
-                        title: {
-                            display: true,
-                            text: "Levées de fonds de Mistral ai"
-                        }
-                    }
-                });
-            </script>
+        <div class="col-lg-5">
+            <img src="imageplace.png" alt="image economie" class="img-fluid rounded-3 shadow-lg imgParti1">
         </div>
         <div class="chart-description">
             <h2>Ainsi qu'une valorisation phénoménale</h2>
@@ -237,55 +191,110 @@
     </div>
 
 
-    <div class="melange">
-        <canvas id="myChartfusion" style="width:100%;max-width:700px"></canvas>
-        <script>
-            var xValues = ["Juin - 2023", "Décembre - 2023", "Juin - 2024", "Septembre - 2025"];
+    <div class="container constellation-container">
+        <div>
+            <div class="eltetoile"></div>
+            <div class="eltetoile"></div>
+            <div class="eltetoile"></div>
+        </div>
+        <div class="titre">
+            <h2>Partenaires</h2>
+        </div>
+        <div>
+            <div class="eltetoile"></div>
+            <div class="eltetoile"></div>
+            <div class="eltetoile"></div>
+        </div>
 
-            var yValues = [105, 385, 600, 1700];
-
-            var barColors = ["red", "purple", "blue", "orange", "brown"];
-
-
-            new Chart("myChartfusion", {
-                type: "bar",
-                data: {
-                    labels: xValues,
-                    datasets: [{
-                        backgroundColor: barColors,
-                        data: yValues
-                    }]
-                },
-                options: {
-                    legend: { display: false },
-                    title: {
-                        display: true,
-                        text: "Levées de fonds de Mistral ai"
-                    }
-                }
-            });
-        </script>
     </div>
 
 
-    <div class="text">
-        <p><strong>_Des partenaires et investisseurs stratégiques_</strong></p>
-        <h2><strong>« Un réseau qualitatif les guys »</strong></h2>
-        <p>L’intelligence artificielle transforme profondément notre quotidien,
-            mais son développement et son utilisation génèrent une empreinte écologique
-            liée à la consommation d’énergie,
-            d’eau et de ressources, que nous allons explorer à travers le cas des modèles de Mistral.</p>
+    <div class="container">
+        <div class="text-block">
+            <h1>Blablabla</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi mauris, pulvinar quis porta ut, malesuada
+                sed
+                tellus.</p>
+        </div>
+        <p class="number">85%</p>
+        <div class="text-block">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi mauris, pulvinar quis porta ut, malesuada
+                sed
+                tellus.</p>
+        </div>
     </div>
 
 
-   <div class="constellation_de_la_mort">
+    <div class="partenaires-defilent"></div>
     
-   </div>
+
+    <div class="container container-chart">
+        <div class="col-lg-5">
+            <img src="imageplace.png" alt="image economie" class="img-fluid rounded-3 shadow-lg imgParti1">
+        </div>
+        <div class="chart-description">
+            <h2>Pie chart sur les parts</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi mauris, pulvinar quis porta ut, malesuada
+                sed
+                tellus. Phasellus sapien nulla, egestas et felis sit amet, fermentum ornare augue. In risus nisl,
+                commodo at
+                ligula eget, congue mattis libero. Maecenas mollis,</p>
+        </div>
+    </div>
+
+    <section class="carousel1">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
 
 
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+          aria-current="true"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></button>
+      </div>
 
 
+      <div class="carousel-inner text-center">
 
+        <div class="carousel-item active">
+          <div class="carousel-content">
+            <h2>Bienvenue chez Mistral</h2>
+            <p>Découvrez nos projets innovants en intelligence artificielle et robotique médicale.</p>
+            <a href="#" class="btn btn-primary">En savoir plus</a>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="carousel-content">
+            <h2>Nos Fondateurs</h2>
+            <p>Rencontrez les esprits derrière Mistral et leur vision pour un futur technologique.</p>
+            <a href="#" class="btn btn-success">Découvrir</a>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="carousel-content">
+            <h2>Projets Publicitaires</h2>
+            <p>Des campagnes créatives qui mettent en valeur notre innovation et nos solutions.</p>
+            <a href="#" class="btn btn-warning">Voir les projets</a>
+          </div>
+        </div>
+
+      </div>
+
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+    </div>
+  </section>
 
 
 
@@ -299,7 +308,7 @@
         <div class="band" style="background-color:#ffd27f;"></div>
         <div class="footercontent">
             <hr>
-            <p> @ Ecrit par Lili COLOMBAIN</p>
+            <p> © 2025 Lili Colombain</p>
             <a href="#"> revenir en haut de page</a>
             <a href="index.html"><img src="icon.png" alt="notre icon"></a>
         </div>

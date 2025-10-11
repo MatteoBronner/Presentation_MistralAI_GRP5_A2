@@ -8,12 +8,19 @@ html, body {
 header hr {
   margin-top: 10px;
   display: block;
-  color: #313131;
+  color: #FFFEF9 ;
 }
 
+.croute {
+  margin-bottom: 12px;
+  border-bottom: solid 3px #F45D05;
+  
+  
+}
 .img-nav {
   width: 10%;
   height: auto;
+  
 }
 
 .navbar-nav * {
@@ -22,6 +29,7 @@ header hr {
   margin-right: 30px;
   margin-bottom: 10px;
   padding: 0%;
+  
 }
 
 .navbar-nav .nav-active {
@@ -30,6 +38,16 @@ header hr {
 
 header {
   padding: 45px;
+  
+}
+
+.navbar {
+    background-color: #FFFEF9;
+    box-shadow: 0 8px 12px -8px rgba(65, 30, 5, 0.567);
+}
+
+.navbar.fixed-top {
+    z-index: 1030;
 }
 
 .P2_titre1 {
@@ -59,7 +77,7 @@ header {
   display: flex;
   flex-direction: column;
   margin: 30px;
-  gap: 150px;
+  gap: 300px;
 }
 
 .IndexText1, .IndexText2 {
@@ -100,6 +118,18 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+
+.btnIndex {
+  text-decoration: none;
+  background-color: #F45D05;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.btnIndex:hover {
+  background-color: #d65104;
 }
 
 footer img {

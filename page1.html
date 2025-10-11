@@ -9,32 +9,31 @@
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="style/style_page1.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
     <title>Presentation Mistral AI</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+        <nav class="navbar navbar-expand-md  fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
                     <img class="img-nav" src="icon.png" alt="logo">
                 </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                        data-bs-target="#navbarNav" aria-controls="navbarNav" 
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <div class="collapse navbar-collapse croute justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link nav-active" href="page1.html">Présentation</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="page2.html">Croissance</a>
+                            <a class="nav-link " href="page2.html">Croissance</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="page3.html">Produits</a>
@@ -49,30 +48,50 @@
         <hr>
     </header>
 
-    <section class="introPresentation">
-        <img src="logoMistral_small.png" alt="img" class="logoMistral">
-        <div>
-            <h1>Présentation de Mistral</h1>
-            <p>Decouvrez les cofondateurs, l'histoire et l'équipe derrière Mistral AI.</p>
+    <div class="container">
+        <div class="row">
+            <div class="image-col">
+                <img src="logoMistral_small.png" alt="img" class="logoMistral">
+            </div>
+
+            <div class="text-col">
+                <h1>
+                    Qui est Mistral AI ?
+                </h1>
+                <p>
+                    Fondée en avril 2023 à Paris, Mistral AI est une startup française d’intelligence artificielle devenue l’un des leaders européens du domaine. Ses fondateurs
+                     — Arthur Mensch, Guillaume Lample et Timothée Lacroix — sont d’anciens chercheurs de DeepMind et Meta, ayant choisi de bâtir une IA plus transparente, plus ouverte et plus accessible. 
+                    Leur mission : démocratiser les modèles d’IA de pointe, proposer des alternatives open source efficaces,
+                    et offrir des solutions prêtes à être déployées, tout en respectant la souveraineté des données.
+                </p>
+            </div>
         </div>
-    </section>
+    </div>
 
     <br>
-    <h2>Les fondateurs</h2>
+    <div class="text">
+        <p><strong>_Les fondateurs de Mistral AI_</strong></p>
+        <h2><strong>« Les genies derrière une entreprise révolutionaire »</strong></h2>
+        <p>
+            Mistral AI à été co-fondés par trois génies de l'informatique, découvrez-en un peux plus sur qui ils sont.
+        </p>
+    </div>
     <br>
 
-    <section class="imgFondateur">
+    <div class="imgFondateur">
         <div class="fondateur">
             <div class="image-container">
                 <img src="style/images/Guillaume.jpg" alt="Guillaume Lample">
                 <div class="hiddenLink">
-                    <a href="#">logo</a>
-                    <a href="#">logo</a>
+                    <a href="https://fr.linkedin.com/in/guillaume-lample-7821095b" target="_blank">LinkedIn</a>
+                    <a href="https://x.com/guillaumelample" target="_blank">X (twitter)</a>
                 </div>
             </div>
             <div class="textFondateur">
-                Guillaume Lample 
-                <br> Avant Mistral, a été chercheur chez Meta. Il est aussi le créateur de LLaMA.
+
+                    Guillaume Lample 
+                    <br> Co-fondateur et Directeur scientifique, Guillaume apporte son expertise reconnue en modélisation de langage et en recherche. 
+                    Formé en France, il a travaillé chez Meta avant de soutenir l’approche d’IA ouverte chez Mistral.
             </div>
         </div>
 
@@ -80,14 +99,14 @@
             <div class="image-container">
                 <img src="style/images/Arthur.jpg" alt="Arthur Mensch">
                 <div class="hiddenLink">
-                    <a href="#">logo</a>
-                    <a href="#">logo</a>
-                    <a href="#">logo</a>
+                    <a href="https://www.linkedin.com/posts/arthur-mensch_mistral-ai-is-officially-taking-off-activity-7074514730349944832-E8kg?utm_source=chatgpt.com" target="_blank">LinkedIn</a>
+                    <a href="https://x.com/arthurmensch" target="_blank">X (twitter)</a>
                 </div>
             </div>
-            <div class="textFondateur">
+            <div class="text textFondateur">
                 Arthur Mensch 
-                <br> L'une des figures les plus importantes dans l'IA française, avant Mistral il a été chercheur pour DeepMind.
+                <br> Co-fondateur et CEO, Arthur est visionnaire, animé par l’idée d’une IA qui ne soit pas seulement puissante mais aussi responsable. 
+                Ancien de DeepMind, il défend une IA modulaire, transparente, efficace et utile.
             </div>
         </div>
 
@@ -95,91 +114,154 @@
             <div class="image-container">
                 <img src="style/images/Timthee.jpg" alt="Timothée Lacroix">
                 <div class="hiddenLink">
-                    <a href="#">logo</a>
-                    <a href="#">logo</a>
+                    <a href="https://fr.linkedin.com/in/timothee-lacroix-59517977" target="_blank">LinkedIn</a>
                 </div>
             </div>
             <div class="textFondateur">
                 Timothée Lacroix
-                <br> Lui aussi été chercheur pour Meta avant Mistral AI.
+                <br> Co-fondateur et CTO, Timothée assure la partie technique : infrastructure, efficacité, modèles optimisés. Fort de son passage chez Meta, 
+                il veille à ce que la technologie reste performante, scable, et respectueuse des contraintes environnementales.
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="text">
+        <p><strong>_Carte des différents bureaux de Mistral AI_</strong></p>
+        <h2><strong>« Une entreprise française, mais pas que »</strong></h2>
+        <p>
+            Mistral AI est basée à Paris, où se situe son siège principal, mais l’entreprise a une portée internationale grâce à des bureaux stratégiquement placés pour favoriser la recherche, 
+            le développement et les partenariats — notamment en Europe, en Asie et dans la Silicon Valley. 
+            Ce rayonnement permet à l’équipe d’être aux échanges, d’attirer les talents mondiaux et de collaborer sur des projets à grande échelle.
+        </p>
+    </div>
+    <br>
+    
+    <section class="mapMonde">
+
+        <div class="map-container">
+            <img src="style/images/mapMonde.webp" alt="Carte du monde" class="world-map">
+
+            <div class="pin" style="top: 28%; left: 47%;">
+                <span class="material-symbols-outlined">location_on</span>
+                <div class="tooltip">
+                    <h4>Paris</h4>
+                    <p>Siège principal de Mistral AI.</p>
+                </div>
+            </div>
+
+            <div class="pin" style="top: 34%; left: 10%;">
+                <span class="material-symbols-outlined">location_on</span>
+                <div class="tooltip">
+                    <h4>Palo Alto</h4>
+                    <p>Bureau axé sur la R&D et les partenariats américains.</p>
+                </div>
+            </div>
+
+            <div class="pin" style="top: 52%; left: 80%;">
+                <span class="material-symbols-outlined">location_on</span>
+                <div class="tooltip">
+                    <h4>Singapour</h4>
+                    <p>Centre stratégique pour l’Asie.</p>
+                </div>
+            </div>
+
+            <div class="pin" style="top: 25%; left: 46%;">
+                <span class="material-symbols-outlined">location_on</span>
+                <div class="tooltip">
+                    <h4>Londres</h4>
+                    <p>Bureau européen complémentaire.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="mapMonde">
-  <h2>Carte des différents bureaux de Mistral AI</h2>
+    <br>
+    <div class="text">
+    <p><strong>_Informations générales sur l'équipe de Mistral AI_</strong></p>
+    <h2><strong>« Une équipe exceptionnelle, guidée par la collaboration et la diversité »</strong></h2>
+    <p>
+        L’équipe de Mistral AI est composée de talents internationaux réunis autour d’une vision commune : développer des solutions d’intelligence artificielle ouvertes, performantes et responsables. 
+        L’entreprise valorise la pluralité des profils, l’inclusion et la créativité, ce qui contribue à une culture de travail stimulante et innovante.
+    </p>
+</div>
+<br>
 
-  <div class="map-container">
-    <img src="style/images/mapMonde.webp" alt="Carte du monde" class="world-map">
+<section class="Presentation">
+    <div class="IndexTable">
 
-    <div class="pin" style="top: 45%; left: 47%;">
-      <span class="material-symbols-outlined">location_on</span>
-      <div class="tooltip">
-        <h4>Paris</h4>
-        <p>Siège principal de Mistral AI.</p>
-      </div>
+        <!-- Carte 1 : Diversité culturelle -->
+        <div class="card">
+            <img src="style/images/image_wireframe.png" class="card-img-top" alt="Pluralité des nationalités">
+            <div class="card-body">
+                <h5 class="card-title">Diversité culturelle et internationale</h5>
+                <p class="card-text">
+                    L’équipe regroupe plus de 15 nationalités différentes, favorisant une richesse de perspectives et d’expériences au sein de chaque projet.
+                </p>
+            </div>
+        </div>
+
+        <!-- Carte 2 : Mixité dans le leadership -->
+        <div class="card">
+            <img src="style/images/image_wireframe.png" class="card-img-top" alt="Mixité dans le leadership">
+            <div class="card-body">
+                <h5 class="card-title">Équilibre et mixité dans le leadership</h5>
+                <p class="card-text">
+                    Environ 50 % des postes de direction sont occupés par des femmes, reflétant un engagement fort pour l’égalité et la diversité au plus haut niveau.
+                </p>
+            </div>
+        </div>
+
+        <!-- Carte 3 : Taille et culture -->
+        <div class="card">
+            <img src="style/images/image_wireframe.png" class="card-img-top" alt="Taille de l'équipe et culture inclusive">
+            <div class="card-body">
+                <h5 class="card-title">Taille et culture d’entreprise</h5>
+                <p class="card-text">
+                    Avec plus de 200 collaborateurs, Mistral AI cultive un environnement inclusif et collaboratif où chacun peut contribuer pleinement et se développer professionnellement.
+                </p>
+            </div>
+        </div>
+
+        <!-- Carte 4 : Méthodologie et innovation -->
+        <div class="card">
+            <img src="style/images/image_wireframe.png" class="card-img-top" alt="Méthode de travail">
+            <div class="card-body">
+                <h5 class="card-title">Méthodologie et innovation</h5>
+                <p class="card-text">
+                    L’équipe adopte des méthodes agiles et collaboratives, encourageant l’expérimentation, le partage des connaissances et la création de solutions IA à la pointe de la technologie.
+                </p>
+            </div>
+        </div>
+
+        <!-- Carte 5 : Organisation interne -->
+        <div class="card">
+            <img src="style/images/image_wireframe.png" class="card-img-top" alt="Organisation interne">
+            <div class="card-body">
+                <h5 class="card-title">Organisation interne</h5>
+                <p class="card-text">
+                    Les équipes sont structurées en services internes spécialisés : recherche, ingénierie, data science, produit et opérations. Cette organisation favorise l’efficacité et la collaboration transversale sur tous les projets.
+                </p>
+            </div>
+        </div>
+
+        <!-- Carte 6 : Mode de travail hybride -->
+        <div class="card">
+            <img src="style/images/image_wireframe.png" class="card-img-top" alt="Mode de travail hybride">
+            <div class="card-body">
+                <h5 class="card-title">Mode de travail hybride</h5>
+                <p class="card-text">
+                    Mistral AI adopte un mode de travail hybride flexible, combinant présentiel et télétravail selon les besoins des équipes. Cela permet de favoriser la productivité tout en maintenant un équilibre sain entre vie professionnelle et personnelle.
+                </p>
+            </div>
+        </div>
+
     </div>
-
-    <div class="pin" style="top: 40%; left: 20%;">
-      <span class="material-symbols-outlined">location_on</span>
-      <div class="tooltip">
-        <h4>Palo Alto</h4>
-        <p>Bureau axé sur la R&D et les partenariats américains.</p>
-      </div>
-    </div>
-
-    <div class="pin" style="top: 55%; left: 80%;">
-      <span class="material-symbols-outlined">location_on</span>
-      <div class="tooltip">
-        <h4>Singapour</h4>
-        <p>Centre stratégique pour l’Asie.</p>
-      </div>
-    </div>
-
-    <div class="pin" style="top: 45%; left: 42%;">
-      <span class="material-symbols-outlined">location_on</span>
-      <div class="tooltip">
-        <h4>Londres</h4>
-        <p>Bureau européen complémentaire.</p>
-      </div>
-    </div>
-  </div>
 </section>
 
-    <section class="Presentation">
-        <h2>Informations générales sur l'équipe de Mistral AI</h2>
 
-        <div class="IndexTable">
-            <div class="card" style="width: 18rem;">
-                <img src="style/images/image_wireframe.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Pluralité des nationalités</h5>
-                    <p class="card-text">L’équipe compte plus de 15 nationalités différentes parmi ses collaborateurs.</p>
-                </div>
-            </div>
 
-            <div class="card" style="width: 18rem;">
-                <img src="style/images/image_wireframe.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Mixité dans le leadership</h5>
-                    <p class="card-text">Environ 50 % des postes de direction sont occupés par des femmes.</p>
-                </div>
-            </div>
-
-            <div class="card" style="width: 18rem;">
-                <img src="style/images/image_wireframe.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Taille de l’équipe et culture inclusiveness</h5>
-                    <p class="card-text">
-                        Mistral AI compte 200+ collaborateurs donc Mistral à
-                        une culture “diverse & inclusive”!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-     <footer class="footer-bandes">
+    <footer class="footer-bandes">
         <div class="band" style="background-color:#ff8c3a;"></div>
         <div class="band" style="background-color:#ff9f57;"></div>
         <div class="band" style="background-color:#ffb066;"></div>
