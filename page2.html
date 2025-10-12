@@ -195,12 +195,11 @@
             </div>
 
             <script>
-                // données
+
                 const labels = ['Juin - 2023', 'Septembre - 2023', 'Juin - 2024', 'Décembre - 2024'];
                 const levéesDeFonds = [105, 385, 600, 1700];
                 const valorisations = [240, 2000, 5800, 11700];
 
-                // valeur mal pour fixer echelle y
                 const maxValo = Math.max(...valorisations);
                 const suggestedMax = maxValo * 1.1;
 
@@ -209,7 +208,6 @@
                     label: "Levée de Fonds (€M)",
                     data: levéesDeFonds,
                     borderWidth: 1,
-                    // Votre esthétique pour les Levées de Fonds
                     backgroundColor: 'rgba(0, 123, 255, 0.2)',
                     borderColor: 'rgb(0, 123, 255)',
                     hoverBackgroundColor: 'rgba(0, 123, 255, 1)',
@@ -229,8 +227,6 @@
                     hidden: false
                 };
 
-
-                // Ini graphique
                 const cty = document.getElementById('myChartval').getContext('2d');
                 const myChart = new Chart(cty, {
                     type: 'bar',
@@ -281,7 +277,6 @@
                 });
 
 
-                // pour que ça marche avec les boutons
                 const btnAll = document.getElementById('btn-all');
                 const btnLevee = document.getElementById('btn-levee');
                 const btnValo = document.getElementById('btn-valo');
@@ -331,27 +326,17 @@
         </div>
 
         <script>
-            // Vérifiez que la bibliothèque Chart.js est chargée avant ce script.
 
-            // --- 1. Préparation des Données ---
             const labels2 = ['OpenAI', 'Anthropic', 'Mistral AI'];
+            const leveeDeFonds = [10.2, 0.65, 2.79]; 
+            const valorisations2 = [74.4, 4.65, 11.7]; 
 
-            // Simplification pour le graphique (en Milliards d'Euros) :
-            const leveeDeFonds = [10.2, 0.65, 2.79]; // Montant total levé (Mds €)
-            const valorisations2 = [74.4, 4.65, 11.7]; // Dernière valorisation connue (Mds €)
-
-
-            // Calcul de l'échelle Y
-            // **CORRECTION ICI : Utiliser valorisations2**
             const maxValo2 = Math.max(...valorisations2);
-            // **CORRECTION ICI : Utiliser maxValo2**
             const suggestedMax2 = maxValo2 * 1.1;
 
-            // --- 2. Définition des Datasets ---
 
             const leveeDataset2 = {
                 label: "Total Levée de Fonds (€ Mds)",
-                // **CORRECTION ICI : Utiliser leveeDeFonds**
                 data: leveeDeFonds,
                 borderWidth: 1,
                 backgroundColor: 'rgba(0, 123, 255, 0.7)',
@@ -370,10 +355,8 @@
             };
 
 
-            // --- 3. Initialisation du Graphique ---
 
             const cty2 = document.getElementById('myChartComparaison').getContext('2d');
-            // **CORRECTION ICI : Utiliser cty2 pour le contexte**
             const myChart2 = new Chart(cty2, {
                 type: 'bar',
                 data: {
@@ -387,7 +370,6 @@
                         yAxes: [{
                             ticks: {
                                 beginAtZero: true,
-                                // **CORRECTION ICI : Utiliser suggestedMax2**
                                 suggestedMax: suggestedMax2,
                                 callback: function (value) {
                                     return value + ' Mds €';
@@ -443,9 +425,7 @@
         </div>
     </div>
 
-    <div class="bandeau-style v2">
-        <h2 class="titre-bandeau">Des partenaires et investisseurs essentiels</h2>
-    </div>
+    
     <!-- Partie Partenaires -->
 
     <section class="partenaires-section">
@@ -535,9 +515,7 @@
         </div>
 
         <script>
-            // --- 1. Récupération du CONTEXTE 2D (c'est l'étape cruciale) ---
             const canvasElement = document.getElementById('myPieChart');
-            // On obtient le contexte 2D du canvas
             const ctx = canvasElement.getContext('2d');
 
             const data = {
@@ -549,7 +527,7 @@
                 ],
                 datasets: [{
                     label: 'Répartition du marché (%)',
-                    data: [26, 42, 21, 11], // Total : 100
+                    data: [26, 42, 21, 11],
                     backgroundColor: [
                         'rgb(181, 38, 38)',
                         'rgb(42, 62, 161)',
@@ -561,11 +539,9 @@
 
             };
 
-            // --- 2. Configuration du graphique ---
             const config = {
                 type: 'pie',
                 data: data,
-                // Si vous utilisez Chart.js v3.x ou plus :
                 options: {
                     responsive: true,
                     plugins: {
@@ -573,9 +549,9 @@
                             display: true,
                             text: 'Répartition du Secteur d\'Activité',
                             font: {
-                                size: 18, // Utiliser font.size pour v3+
+                                size: 18,
                             },
-                            color: '#333' // Utiliser 'color' au lieu de 'fontColor' pour v3+
+                            color: '#333' 
                         },
                         legend: {
                             display: true,
@@ -583,44 +559,27 @@
                         }
                     }
                 }
-                /*
-                // Si vous utilisez Chart.js v2.x (votre syntaxe d'options était un mélange) :
-                options: {
-                    responsive: true,
-                    title: {
-                        display: true,
-                        text: 'Répartition du Secteur d\'Activité',
-                        fontSize: 18,
-                        fontColor: '#333'
-                    },
-                    legend: {
-                        display: true,
-                        position: 'right',
-                    }
-                }
-                */
             };
 
-            // --- 3. Initialisation du graphique avec le CONTEXTE ---
             new Chart(
-                ctx, // <-- CORRECTION : On passe le contexte 2D (ctx) ici !
+                ctx,
                 config
             );
         </script>
-    </div>
-    <div class="chart-description">
-        <h2>Pie chart sur les parts</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi mauris, pulvinar quis porta ut,
-            malesuada
-            sed
-            tellus. Phasellus sapien nulla, egestas et felis sit amet, fermentum ornare augue. In risus nisl,
-            commodo at
-            ligula eget, congue mattis libero. Maecenas mollis,</p>
-    </div>
+
+        <div class="chart-description">
+            <h2>Pie chart sur les parts</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi mauris, pulvinar quis porta ut,
+                malesuada
+                sed
+                tellus. Phasellus sapien nulla, egestas et felis sit amet, fermentum ornare augue. In risus nisl,
+                commodo at
+                ligula eget, congue mattis libero. Maecenas mollis,</p>
+        </div>
     </div>
 
-    <div class="container ">
-        <div class="container-chart">
+    <div class="container dernier">
+        <div>
             <h2>L'Avantage Compétitif de Mistral AI</h2>
             <p>Mistral AI se positionne ainsi à l'intersection d'une croissance ultrarapide et d'une transparence (grâce
                 à
@@ -636,9 +595,9 @@
         </div>
     </div>
 
-
-    // <!-- Carousel de conclusion -->
-
+    
+     
+    <!--
 
     <section class="carousel1">
         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -696,7 +655,7 @@
         </div>
     </section>
 
-
+    -->
 
 
     <footer class="footer-bandes">
@@ -714,15 +673,5 @@
         </div>
 
     </footer>
-
-
-
-
 </body>
-
-
-
-
-
-
 </html>

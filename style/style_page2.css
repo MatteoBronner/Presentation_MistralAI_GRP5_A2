@@ -117,15 +117,6 @@ header {
   margin-left: 30px;
 }
 
-.v2 {
-  margin-left: 60%;
-  margin-right: 0;
-  border-top-left-radius: 7px;
-  border-bottom-left-radius: 7px;
-  margin-bottom: 100px;
-  margin-top: 0;
-}
-
 @media (max-width: 700px) {
   .bandeau-style {
     margin-right: 15%;
@@ -277,8 +268,6 @@ header {
 
   .chart-description {
     width: 100%;
-    background-color: rgb(247, 193, 128);
-    border-radius: 5px;
     margin: 50px;
     padding: 20px;
   }
@@ -288,24 +277,18 @@ header {
 /* PARTIE 2 */
 
 
-/* grid */
 .partenaires-section {
   position: relative;
   padding: 80px 0;
-  /* Couleur de fond légèrement jaunie */
   background-color: #fffef9;;
-
   max-height: 550px;
-  /* Centrage du texte et du contenu principal */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   overflow: hidden;
-  /* Empêche les logos tournés de créer des barres de défilement */
 }
 
-/* Effet de papier quadrillé (le "pattern" en arrière-plan) */
 .background-pattern {
   position: absolute;
   top: 0;
@@ -313,13 +296,10 @@ header {
   width: 100%;
   height: 100%;
   opacity: 0.5;
-  /* Pour que le quadrillage soit léger */
-  /* Création du motif avec un dégradé répétitif */
   background-image:
     linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
   background-size: 25px 25px;
-  /* Taille des carrés du quadrillage */
   z-index: 0;
 }
 
@@ -343,7 +323,6 @@ h1 {
   font-size: 1.1em;
 }
 
-
 .logo-card {
   width: 150px;
   height: 100px;
@@ -358,20 +337,13 @@ h1 {
 .logo-card img {
   max-width: 100%;
   max-height: 100%;
-
-  /* 1. État Initial : Gris et moins opaque */
-  
   opacity: 0.7;
-
-  /* 2. Transition fluide pour l'effet de couleur/opacité */
   transition: filter 0.5s ease, opacity 0.5s ease;
 }
 
 .logo-card:hover img {
-  /* 3. État au Survol : Couleur et pleine opacité */
   filter: grayscale(0%);
   opacity: 1;
-  /* (Optionnel) Ajout d'une ombre douce pour le "pop-out" */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -391,58 +363,9 @@ h1 {
 }
 
 
-
-.constellation-container {
-  width: 100%;
-  height: 600px;
-  margin-top: 130px;
-  background-color: pink;
-  display: flex;
-  align-content: space-between;
-  flex-direction: row;
-}
-
-.eltetoile {
-  padding: 25px;
-  width: 15%;
-  background-color: black;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-
-
-.number {
-  font-size: 8em;
-  font-weight: bold;
-  color: #007bff;
-  flex-shrink: 0;
-}
-
-.text-block {
-  flex: 1;
-  padding: 15px;
-  background-color: #f8f8f8;
-  border-radius: 8px;
-}
-
-.text-block h1 {
-  margin-top: 0;
-  font-size: 1.5em;
-  color: #333;
-}
-
-
 /* PARTIE 3 */
 
 
-.partenaires-defilent {
-  padding: 50px;
-  width: 100%;
-  background-color: orange;
-}
-
-/* animation css */
 .horizontal-scroll {
   position: relative;
   width: 100%;
@@ -451,13 +374,13 @@ h1 {
 }
 
 .horizontal-scroll-item {
-  background-size: cover; /* ou contain selon l’effet */
+  background-size: cover; 
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
   top: 0;
-  left: 0; /* initialement toutes superposées */
-  width: 200px; /* largeur des images */
+  left: 0; 
+  width: 200px; 
   height: 100%;
 }
 
@@ -501,9 +424,17 @@ h1 {
   margin-top: 50px;
 }
 
+
+.dernier {
+  background-color: #ffffff32;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+
 /* CONCLUSION */
 
-
+/*
 .carousel1 {
   text-align: center;
   margin: 50px auto;
@@ -553,7 +484,7 @@ h1 {
 .carousel-control-next {
   top: 50%;
   transform: translateY(-50%);
-}
+}*/
 
 /* FOOTER */
 
@@ -593,8 +524,4 @@ footer .footer-content img {
 footer {
   margin: 0;
   padding: 0;
-}
-
-.footercontent {
-  z-index: 2;
 }
