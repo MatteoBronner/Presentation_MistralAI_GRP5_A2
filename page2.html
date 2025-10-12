@@ -496,26 +496,31 @@
 
         //Scroll images
         const container = document.querySelector('.horizontal-scroll');
-        const items = document.querySelectorAll('.horizontal-scroll-item');
+        const items = Array.from(document.querySelectorAll('.horizontal-scroll-item'));
+        let positions = [];
 
-        //On verifie si l'image sort de l'écran
+        // initialiser les positions
+        let x = 0;
+        items.forEach(item => {
+            item.style.left = `${x}px`;
+            positions.push(x);
+            x += item.offsetWidth + 10; // +10px gap
+        });
+
         function loopImages() {
-            items.forEach(item => {
-                const rect = item.getBoundingClientRect();
+            items.forEach((item, i) => {
+                positions[i] -= 1; // vitesse du défilement
+                    if (positions[i] + item.offsetWidth < 0) {
+                        positions[i] = Math.max(...positions) + item.offsetWidth + 10;
+                    }
+                    item.style.left = positions[i] + 'px';
+                });
 
-                if (rect.right < 0) {
-                    container.appendChild(item);
-                }
-            });
-
-            //On relance la vérification à la frame suivante
             requestAnimationFrame(loopImages);
         }
 
-        //Démarre la boucle
         loopImages();
     </script>
-
     <script src="bootstrap/js/bootstrap.js"></script>
 </body>
 
