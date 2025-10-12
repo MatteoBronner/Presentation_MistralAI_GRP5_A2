@@ -1,8 +1,15 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #ece1e1;
+ 
 }
+
+html,
+body {
+    background-color: #FFFEF9;
+    font-family: "Inter", sans-serif;
+}
+
 
 
 h1, h2, h3, .carousel-text h2, .progress-label {
