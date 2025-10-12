@@ -1,9 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
- 
-}
-
 html,
 body {
     background-color: #FFFEF9;
@@ -84,7 +78,6 @@ p {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
   justify-content: center;
   align-items: center;
   overflow-y: auto; 
@@ -92,7 +85,6 @@ p {
 }
 
 .modal-content {
-  background-color: #fff;
   padding: 30px;
   border-radius: 15px;
   width: 90%;
@@ -169,7 +161,6 @@ p {
     }
 
     .data {
-      background: #f1f8f5;
       padding: 1em 1.5em;
       border-radius: 10px;
       margin: 1em 0;
@@ -270,7 +261,6 @@ p {
 }
 
 body {
-  background: linear-gradient(145deg, #f6f8f9, #eaeff2);
   font-family: 'Poppins', sans-serif;
   color: var(--text);
 }
@@ -295,7 +285,6 @@ body {
 .progress-group {
   flex: 1 1 300px; 
   max-width: 350px;
-  background: #fff;
   border-radius: 16px;
   padding: 24px;
   box-shadow: 0 10px 22px rgba(0,0,0,0.06);
@@ -328,7 +317,6 @@ body {
 .progress {
   flex: 1;
   height: 22px;
-  background: #f4f6f8;
   border-radius: 12px;
   overflow: hidden;
   position: relative;
@@ -586,7 +574,6 @@ footer .footer-content img {
 
 .card {
   flex: 1 1 270px;
-  background: #f0f8ff;
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
