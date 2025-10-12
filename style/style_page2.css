@@ -556,8 +556,31 @@ h1 {
 }
 
 
-/* FOOTER */
+/* animation css */
+.horizontal-scroll {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
 
+.horizontal-scroll-item {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 150px;
+  margin-right: 10px;
+  animation: scroll-left 15s linear infinite;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* FOOTER */
 
 footer.footer-bandes {
   position: relative;
@@ -580,12 +603,6 @@ footer .footer-content {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-}
-
-footer .footer-content a,
-footer .footer-content p {
-  color: white;
-  text-decoration: none;
 }
 
 footer .footer-content a:hover {
