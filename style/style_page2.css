@@ -14,7 +14,8 @@ h2 {
 
 
 .coloredLine {
-  margin-bottom: 12px;
+  margin-top: 20px;
+  margin-bottom: 8px;
   border-bottom: solid 3px #F45D05;
 }
 
@@ -40,7 +41,7 @@ header {
 }
 
 .navbar {
-  background-color: #FFFEF9;
+  background-color: #fffef9;
   box-shadow: 0 8px 12px -8px rgba(65, 30, 5, 0.567);
 }
 
@@ -94,7 +95,7 @@ header {
 
 
 .bandeau-style {
-  background-color: #ff9f40;
+  background-color: #F45D05;
   padding: 20px;
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
@@ -114,6 +115,14 @@ header {
   white-space: wrap;
   font-size: 2em;
   margin-left: 30px;
+}
+
+.v2 {
+  margin-left: 60%;
+  margin-right: 0;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-bottom: 100px;
 }
 
 @media (max-width: 700px) {
@@ -210,14 +219,15 @@ header {
   transition: background-color 0.3s;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  border-bottom: solid 4px #a4322a;
+  border-bottom: solid 4px #ee5700;
   transition: transform 0.5s ease-in-out;
+  font-weight: 600;
 }
 
 .boutons-container button:hover,
 .boutons-container button.active {
   background-color: #ff9f40;
-  color: #a4322a;
+  color: #ee5700;
   border-color: #ff9f40;
   transform: scale(1.02);
 }
@@ -282,7 +292,7 @@ header {
   position: relative;
   padding: 80px 0;
   /* Couleur de fond légèrement jaunie */
-  background-color: #fff7ea;
+  background-color: #fffef9;;
 
   max-height: 550px;
   /* Centrage du texte et du contenu principal */
@@ -379,6 +389,8 @@ h1 {
   margin-top: -35px;
 }
 
+
+
 .constellation-container {
   width: 100%;
   height: 600px;
@@ -445,7 +457,7 @@ h1 {
   animation-name: infiniteScroll;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  
+
 }
 
 @keyframes infiniteScroll {
@@ -454,7 +466,7 @@ h1 {
   }
 
   to {
-    transform: translateX(calc(0px - 50% - 50px));
+    transform: translateX(1300px);
   }
 }
 
@@ -478,9 +490,17 @@ h1 {
   background-image: url("../brave.png");
 }
 
-.piechart{
+.explication{
+  display: flex;
+  flex-direction: column;
+  align-content: left;
   margin-top: 100px;
 }
+
+.piechart {
+  margin-top: 50px;
+}
+
 /* CONCLUSION */
 
 

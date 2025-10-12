@@ -78,7 +78,7 @@
 
 
             <div class="col-lg-5">
-                <img src="imageplace.png" alt="image economie" class="img-fluid rounded-3 shadow-lg imgParti1">
+                <img src="economie.png" alt="image economie" class="img-fluid rounded-3 shadow-lg imgParti1">
             </div>
             <div class="row mt-4">
                 <br />
@@ -331,7 +331,9 @@
         </div>
     </div>
 
-
+    <div class="bandeau-style v2">
+        <h2 class="titre-bandeau">Des partenaires et investisseurs essentiels</h2>
+    </div>
     <!-- Partie Partenaires -->
 
     <section class="partenaires-section">
@@ -410,20 +412,92 @@
         <div class="horizontal-scroll-item item-5"></div>
     </div>
 
-
+    <div class="container explication">
+        <h2>Ces nombeux partenaires sont essentiels pour mistral</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi mauris, pulvinar quis porta ut,
+            malesuada
+            sed
+            tellus. Phasellus sapien nulla, egestas et felis sit amet, fermentum ornare augue. In risus nisl,
+            commodo at
+            ligula eget, congue mattis libero. Maecenas mollis,Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Sed mi mauris, pulvinar quis porta ut,
+            malesuada
+            sed
+            tellus. Phasellus sapien nulla, egestas et felis sit amet, fermentum ornare augue. In risus nisl,
+            commodo at
+            ligula eget, congue mattis libero. Maecenas mollis,Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Sed mi mauris, pulvinar quis porta ut,
+            malesuada
+            sed
+            tellus. Phasellus sapien nulla, egestas et felis sit amet, fermentum ornare augue. In risus nisl,
+            commodo at
+            ligula eget, congue mattis libero. Maecenas mollis,</p>
+    </div>
     <div class="container container-chart">
-        <div class="col-lg-5 piechart">
-            <img src="imageplace.png" alt="image economie" class="img-fluid rounded-3 shadow-lg imgParti1">
+
+        <div class="monstyle">
+
+            <div class="myChartlevee">
+                <canvas id="myPieChart"></canvas>
+            </div>
         </div>
-        <div class="chart-description">
-            <h2>Pie chart sur les parts</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi mauris, pulvinar quis porta ut,
-                malesuada
-                sed
-                tellus. Phasellus sapien nulla, egestas et felis sit amet, fermentum ornare augue. In risus nisl,
-                commodo at
-                ligula eget, congue mattis libero. Maecenas mollis,</p>
-        </div>
+        <script>
+            const cta = document.getElementById('myPieChart');
+            const data = {
+                labels: [
+                    'Secteur financier et bancaire',
+                    'Industrie et logistique',
+                    'Secteur public et santé',
+                    'Retail et e-commerce'
+                ],
+                datasets: [{
+                    label: 'Répartition du marché (%)',
+                    data: [26, 42, 21, 11],
+                    backgroundColor: [
+                        'rgb(181, 38, 38)',
+                        'rgb(42, 62, 161)',
+                        'rgb(161, 94, 196)',
+                        'rgb(63, 160, 54)'
+                    ],
+                    hoverOffset: 4
+                }],
+
+            };
+            const config = {
+                type: 'pie',
+                data: data,
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Répartition du Secteur d\'Activité',
+                            fontSize: 18,
+                            fontColor: '#333'
+                        },
+                        legend: {
+                            display: true, // S'assurer que les légendes sont affichées
+                            position: 'right',
+                        }
+
+                    }
+                };
+
+                new Chart(
+                    cta,
+                    config
+                );
+        </script>
+    </div>
+    <div class="chart-description">
+        <h2>Pie chart sur les parts</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi mauris, pulvinar quis porta ut,
+            malesuada
+            sed
+            tellus. Phasellus sapien nulla, egestas et felis sit amet, fermentum ornare augue. In risus nisl,
+            commodo at
+            ligula eget, congue mattis libero. Maecenas mollis,</p>
+    </div>
     </div>
 
 
