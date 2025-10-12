@@ -1,4 +1,11 @@
-/* css pour la bar de nav pour le moment */
+html, body {
+  background-color: #FFFEF9;
+  font-family: "Inter", sans-serif;
+}
+
+h1, h2 {
+    font-family: "Roboto Condensed", sans-serif;
+}
 
 header hr {
   margin-top: 10px;
@@ -160,15 +167,28 @@ header {
 }
 
 .btnIndex {
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+
   text-decoration: none;
-  background-color: #F45D05;
-  color: white;
-  padding: 5px;
-  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #ff9f40;
+  color: #f0f0f0;
+  border-bottom: solid 4px #a4322a;
+  
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  transition: transform 0.5s ease-in-out;
+  transition: background-color 0.3s;
 }
 
 .btnIndex:hover {
-  background-color: #d65104;
+  background-color: #ff9f40;
+  color: #a4322a;
+  border-color: #ff9f40;
+  transform: scale(1.02);
 }
 
 footer.footer-bandes {
@@ -200,14 +220,13 @@ footer .footer-content {
   color: white;
 }
 
-footer .footer-content a,
-footer .footer-content p {
+footer .footer-content a {
   color: white;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 footer .footer-content a:hover {
-  text-decoration: underline;
+  font-weight: bold;
 }
 
 footer .footer-content img {
