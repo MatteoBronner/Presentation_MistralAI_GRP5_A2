@@ -1,26 +1,26 @@
-html, body {
-    background-color: #FFFEF9;
-    font-family: "Inter", sans-serif;
-    
-    
+html,
+body {
+  background-color: #FFFEF9;
+  font-family: "Inter", sans-serif;
 }
 
-header hr {
-  margin-top: 10px;
-  display: block;
-  color: #FFFEF9 ;
+h1,
+h2 {
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-.croute {
+
+/* HEADER */
+
+
+.coloredLine {
   margin-bottom: 12px;
   border-bottom: solid 3px #F45D05;
-  
-  
 }
+
 .img-nav {
   width: 10%;
   height: auto;
-  
 }
 
 .navbar-nav * {
@@ -29,7 +29,6 @@ header hr {
   margin-right: 30px;
   margin-bottom: 10px;
   padding: 0%;
-  
 }
 
 .navbar-nav .nav-active {
@@ -38,46 +37,82 @@ header hr {
 
 header {
   padding: 45px;
-  
 }
 
-/* 🎯 Nouveau style pour l'ombre ! */
 .navbar {
-    background-color: #FFFEF9;
-    box-shadow: 0 8px 12px -8px rgba(65, 30, 5, 0.567);
+  background-color: #FFFEF9;
+  box-shadow: 0 8px 12px -8px rgba(65, 30, 5, 0.567);
 }
-/* Vous pourriez aussi avoir besoin d'augmenter le 'z-index' du navbar
-   pour être certain qu'elle soit au-dessus de tout votre contenu : */
+
 .navbar.fixed-top {
-    z-index: 1030; /* Valeur Bootstrap par défaut pour fixed-top, à confirmer */
+  z-index: 1030;
 }
 
 
-h1, h2 {
-    font-family: "Roboto Condensed", sans-serif;
-}
+/* INTRODUCTION */
 
-.container py-5 {
-    background-color: aqua;
-    
-}
-
-.text-centre{
-    margin-top: 100px;
-}
-
-.frise{
-    margin-top: 200px;
-}
 
 .imgParti1 {
-    height: 400px;
-    object-fit: cover; 
-    width: 100%;
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
 }
 
-.texte1{
-    margin-top:50px;
+.text {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #4a2c00;
+  border-radius: 12px;
+}
+
+.text p:first-of-type {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e47a2e;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.text h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.text p:last-of-type {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #a35c1a;
+}
+
+
+/* PARTIE 1 */
+
+
+.bandeau-style {
+  background-color: #ff9f40;
+  padding: 200px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  margin-right: 60%;
+  color: white;
+  margin-top: 100px;
+}
+
+.titre-bandeau {
+  margin: 0;
+  white-space: wrap;
+  font-size: 2em;
+}
+
+/* FRISE */
+
+.frise {
+  margin-top: 200px;
 }
 
 .horizontal-timeline .items {
@@ -123,84 +158,193 @@ h1, h2 {
   }
 }
 
-
-
-
-.text {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem 1.5rem;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-  color: #4a2c00; 
- border-radius: 12px;
-}
-
-.text p:first-of-type {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #e47a2e; 
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.text h2 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.text p:last-of-type {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #a35c1a; 
-}
-
-footer {
-    background-color: #e78045;
-    padding-bottom: 60px;
-}
-
-
-
-/* chart */
-
-.container-chart{
-  display:flex;
-  justify-content: space-between;
-  
-  margin-top: 100px;
-  
-}
+/* CHARTS */
 
 .chart-description {
   width: 50%;
 }
 
-.bar-chart{
-  margin-right:100px;
-  width: 400px;
+.container-chart {
+  width: 80%;
+  margin: 50px auto;
+}
 
-  background-color: #ffd556 ;
-  padding: 40px;
+.boutons-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.boutons-container button {
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  background-color: #ff9f40;
+  color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: solid 4px #a4322a;
+  transition: transform 0.5s ease-in-out;
+}
+
+.boutons-container button:hover,
+.boutons-container button.active {
+  background-color: #ff9f40;
+  color: #a4322a;
+  border-color: #ff9f40;
+  transform: scale(1.02);
+}
+
+.myChartlevee {
+  background-color: rgb(255, 255, 255);
+  height: 400px;
+  padding: 20px;
   border-radius: 8px;
-  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px;
 }
 
-.melange {
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
+.monstyle {
+  width: 600px;
+  height: 500px;
 }
+
+.myChartlevee:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1300px;
+  margin: 50px auto;
+  padding: 20px;
+  gap: 100px;
+}
+
+
+/* PARTIE 2 */
+
+
+.constellation-container {
+  width: 100%;
+  height: 600px;
+  margin-top: 130px;
+  background-color: pink;
+  display: flex;
+  align-content: space-between;
+  flex-direction: row;
+}
+
+.eltetoile {
+  padding: 25px;
+  width: 15%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+
+.number {
+  font-size: 8em;
+  font-weight: bold;
+  color: #007bff;
+  flex-shrink: 0;
+}
+
+.text-block {
+  flex: 1;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.text-block h1 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+
+/* PARTIE 3 */
+
+
+.partenaires-defilent {
+  padding: 50px;
+  width: 100%;
+  background-color: orange;
+}
+
+
+/* CONCLUSION */
+
+
+.carousel1 {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.carousel-inner {
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-slide {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: linear-gradient(135deg, #f0f4ff, #d9e4ff);
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide img {
+  width: 220px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-text h2 {
+  margin-bottom: 15px;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.carousel-text p {
+  margin-bottom: 0;
+  color: #333333;
+  font-size: 1.05rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/* FOOTER */
 
 
 footer.footer-bandes {
   position: relative;
   width: 100%;
-  height: 200px; 
- 
+  height: 200px;
+
   overflow: hidden;
   text-align: center;
   font-family: Arial, sans-serif;
@@ -240,438 +384,6 @@ footer {
   padding: 0;
 }
 
-
-html,
-body {
-    background-color: #FFFEF9;
-    font-family: "Inter", sans-serif;
-
-
-}
-
-header hr {
-    margin-top: 10px;
-    display: block;
-    color: #FFFEF9;
-}
-
-.croute {
-    margin-bottom: 12px;
-    border-bottom: solid 3px #F45D05;
-
-
-}
-
-.img-nav {
-    width: 10%;
-    height: auto;
-
-}
-
-.navbar-nav * {
-    font-weight: bold;
-    backdrop-filter: blur(1px);
-    margin-right: 30px;
-    margin-bottom: 10px;
-    padding: 0%;
-
-}
-
-.navbar-nav .nav-active {
-    color: #F45D05;
-}
-
-header {
-    padding: 45px;
-
-}
-
-/* 🎯 Nouveau style pour l'ombre ! */
-.navbar {
-    background-color: #FFFEF9;
-    box-shadow: 0 8px 12px -8px rgba(65, 30, 5, 0.567);
-}
-
-/* Vous pourriez aussi avoir besoin d'augmenter le 'z-index' du navbar
-   pour être certain qu'elle soit au-dessus de tout votre contenu : */
-.navbar.fixed-top {
-    z-index: 1030;
-    /* Valeur Bootstrap par défaut pour fixed-top, à confirmer */
-}
-
-
-h1,
-h2 {
-    font-family: "Roboto Condensed", sans-serif;
-}
-
-.container py-5 {
-    background-color: aqua;
-
-}
-
-.text-centre {
-    margin-top: 100px;
-}
-
-.frise {
-    margin-top: 200px;
-}
-
-.imgParti1 {
-    height: 400px;
-    object-fit: cover;
-    width: 100%;
-}
-
-.texte1 {
-    margin-top: 50px;
-}
-
-.horizontal-timeline .items {
-    border-top: 3px solid #e9ecef;
-}
-
-.horizontal-timeline .items .items-list {
-    display: block;
-    position: relative;
-    text-align: center;
-    padding-top: 70px;
-    margin-right: 0;
-}
-
-.horizontal-timeline .items .items-list:before {
-    content: "";
-    position: absolute;
-    height: 36px;
-    border-right: 2px dashed #dee2e6;
-    top: 0;
-}
-
-.horizontal-timeline .items .items-list .event-date {
-    position: absolute;
-    top: 36px;
-    left: 0;
-    right: 0;
-    width: 75px;
-    margin: 0 auto;
-    font-size: 0.9rem;
-    padding-top: 8px;
-}
-
-@media (min-width: 1140px) {
-    .horizontal-timeline .items .items-list {
-        display: inline-block;
-        width: 24%;
-        padding-top: 45px;
-    }
-
-    .horizontal-timeline .items .items-list .event-date {
-        top: -40px;
-    }
-}
-
-
-
-
-.text {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem 1.5rem;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    color: #4a2c00;
-    border-radius: 12px;
-}
-
-.text p:first-of-type {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #e47a2e;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.text h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-.text p:last-of-type {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #a35c1a;
-}
-
-footer {
-    background-color: #e78045;
-    padding-bottom: 60px;
-}
-
-
-
-/* chart */
-
-
-
-.chart-description {
-    width: 50%;
-}
-
-.bar-chart {
-    margin-right: 100px;
-    width: 400px;
-
-    background-color: #ffd556;
-    padding: 40px;
-    border-radius: 8px;
-
-}
-
-.melange {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-
-
-footer.footer-bandes {
-    position: relative;
-    width: 100%;
-    height: 200px;
-
-    overflow: hidden;
-    text-align: center;
-    font-family: Arial, sans-serif;
-}
-
-footer .band {
-    width: 100%;
-    height: 20%;
-}
-
-footer .footer-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-}
-
-footer .footer-content a,
-footer .footer-content p {
-    color: white;
-    text-decoration: none;
-}
-
-footer .footer-content a:hover {
-    text-decoration: underline;
-}
-
-footer .footer-content img {
-    width: 35px;
-    vertical-align: middle;
-
-}
-
-footer {
-    margin: 0;
-    padding: 0;
-}
-
 .footercontent {
-    z-index: 2;
-}
-
-.bandeau-trans {
-    padding: 30px;
-    background-color: rgb(213, 114, 20);
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px;
-    margin-right: 60%;
-    margin-top: 100px;
-    color: #dee2e6;
-}
-
-.constellation-container {
-    width: 100%;
-    height: 600px;
-    margin-top: 130px;
-    background-color: pink;
-    display: flex;
-    align-content: space-between;
-    flex-direction: row;
-}
-
-.eltetoile {
-    padding: 25px;
-    width: 15%;
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-.container {
-    display: flex;
-    /* Active Flexbox pour aligner les enfants */
-    align-items: center;
-    /* Centre verticalement les éléments */
-    justify-content: center;
-    /* Centre horizontalement les éléments */
-    max-width: 1300px;
-    /* Limite la largeur du conteneur pour mieux visualiser */
-    margin: 50px auto;
-    /* Centre le conteneur sur la page */
-    padding: 20px;
-
-    gap: 100px;
-    /* Ajoute un espace entre les éléments (le chiffre et les blocs de texte) */
-}
-
-.number {
-    /* Le chiffre au centre */
-    font-size: 8em;
-    /* Très grande taille de police */
-    font-weight: bold;
-    color: #007bff;
-    /* Une petite touche de couleur */
-    flex-shrink: 0;
-    /* Empêche le chiffre de rétrécir si l'espace manque */
-}
-
-.text-block {
-    /* Les blocs de texte à gauche et à droite */
-    flex: 1;
-    /* Permet aux blocs de prendre l'espace disponible de manière égale */
-    padding: 15px;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-}
-
-.text-block h1 {
-    margin-top: 0;
-    font-size: 1.5em;
-    color: #333;
-}
-
-
-
-.carousel1 {
-    text-align: center;
-    margin: 50px auto;
-}
-
-.carousel-inner {
-    min-height: 450px;
-    display: flex;
-    align-items: center;
-}
-
-.carousel-slide {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    background: linear-gradient(135deg, #f0f4ff, #d9e4ff);
-    padding: 50px;
-    border-radius: 25px;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-    max-width: 800px;
-    margin: auto;
-    text-align: left;
-    transition: transform 0.5s ease;
-}
-
-.carousel-slide img {
-    width: 220px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-.carousel-text h2 {
-    margin-bottom: 15px;
-    color: #1a1a1a;
-    font-weight: 600;
-}
-
-.carousel-text p {
-    margin-bottom: 0;
-    color: #333333;
-    font-size: 1.05rem;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-
-.partenaires-defilent {
-    padding: 50px;
-    width: 100%;
-    background-color: orange;
-}
-
-.container-chart {
-    width: 80%;
-    margin: 50px auto;
-}
-
-.myChartlevee {
-    /* Définit une hauteur pour le conteneur du graphique */
-    height: 400px;
-}
-
-.boutons-container {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.boutons-container button {
-    padding: 10px 15px;
-    margin: 0 5px;
-    border: 1px solid #ccc;
-    background-color: #ff9f40;
-    color: #f0f0f0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom: solid 4px #a4322a;
-}
-
-.boutons-container button:hover,
-.boutons-container button.active {
-    background-color: #ff9f40;
-    /* Couleur hover/active (similaire à votre orange) */
-    color: #a4322a;
-    border-color: #ff9f40;
-}
-
-.myChartlevee {
-    background-color: rgb(255, 255, 255);
-
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    max-width: 600px;
-    margin: 20px;
-}
-
-.monstyle {
-    width: 600px;
-    height: 500px;
-}
-
-.myChartlevee:hover {
-    transform: scale(1.02);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
+  z-index: 2;
 }
