@@ -199,129 +199,6 @@
 
             </div>
 
-            <script>
-                // données
-                const labels = ['Juin - 2023', 'Septembre - 2023', 'Juin - 2024', 'Décembre - 2024'];
-                const levéesDeFonds = [105, 385, 600, 1700];
-                const valorisations = [240, 2000, 5800, 11700];
-
-                // valeur mal pour fixer echelle y
-                const maxValo = Math.max(...valorisations);
-                const suggestedMax = maxValo * 1.1;
-
-
-                const leveeDataset = {
-                    label: "Levée de Fonds (€M)",
-                    data: levéesDeFonds,
-                    borderWidth: 1,
-                    // Votre esthétique pour les Levées de Fonds
-                    backgroundColor: 'rgba(0, 123, 255, 0.2)',
-                    borderColor: 'rgb(0, 123, 255)',
-                    hoverBackgroundColor: 'rgba(0, 123, 255, 1)',
-
-                    hidden: false
-                };
-
-
-                const valoDataset = {
-                    label: "Valorisation (€M)",
-                    data: valorisations,
-                    borderWidth: 1,
-                    backgroundColor: 'rgba(255, 159, 64, 0.2)',
-                    borderColor: 'rgb(255, 159, 64)',
-                    hoverBackgroundColor: 'rgba(255, 159, 64, 1)',
-
-                    hidden: false
-                };
-
-
-                // Ini graphique
-                const cty = document.getElementById('myChartval').getContext('2d');
-                const myChart = new Chart(cty, {
-                    type: 'bar',
-                    data: {
-                        labels: labels,
-                        datasets: [leveeDataset, valoDataset]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero: true,
-                                    suggestedMax: suggestedMax
-                                },
-                                scaleLabel: {
-                                    display: true,
-                                    labelString: 'Montant (€M)'
-                                }
-                            }],
-                            xAxes: [{
-                                barPercentage: 0.8,
-                                categoryPercentage: 0.8
-                            }]
-                        },
-                        legend: {
-                            display: true
-                        },
-                        tooltips: {
-                            mode: 'index',
-                            intersect: false,
-                        },
-                        title: {
-                            display: true,
-                            text: 'Levées de Fonds vs. Valorisation par date',
-                            fontSize: 18,
-                            fontStyle: 'bold',
-                            fontColor: '#333'
-                        },
-                        tooltips: {
-                            position: 'nearest',
-                            borderWidth: 1,
-                            backgroundColor: 'rgb(0,0,0,0.4)',
-                            borderColor: 'rgb(255,255,255)'
-                        }
-                    }
-                });
-
-
-                // pour que ça marche avec les boutons
-                const btnAll = document.getElementById('btn-all');
-                const btnLevee = document.getElementById('btn-levee');
-                const btnValo = document.getElementById('btn-valo');
-
-
-                function updateChart(showLevee, showValo, activeButton) {
-
-                    myChart.data.datasets[0].hidden = !showLevee;
-                    myChart.data.datasets[1].hidden = !showValo;
-
-
-                    document.querySelectorAll('.boutons-container button').forEach(btn => {
-                        btn.classList.remove('active');
-                    });
-                    activeButton.classList.add('active');
-
-
-                    myChart.update();
-                }
-
-
-                btnAll.addEventListener('click', () => {
-                    updateChart(true, true, btnAll);
-                });
-
-                btnLevee.addEventListener('click', () => {
-                    updateChart(true, false, btnLevee);
-                });
-
-                btnValo.addEventListener('click', () => {
-                    updateChart(false, true, btnValo);
-                });
-            </script>
-
-
         </div>
 
 
@@ -554,53 +431,6 @@
                 <canvas id="myPieChart"></canvas>
             </div>
         </div>
-        <script>
-            const cta = document.getElementById('myPieChart');
-            const data = {
-                labels: [
-                    'Secteur financier et bancaire',
-                    'Industrie et logistique',
-                    'Secteur public et santé',
-                    'Retail et e-commerce'
-                ],
-                datasets: [{
-                    label: 'Répartition du marché (%)',
-                    data: [26, 42, 21, 11],
-                    backgroundColor: [
-                        'rgb(181, 38, 38)',
-                        'rgb(42, 62, 161)',
-                        'rgb(161, 94, 196)',
-                        'rgb(63, 160, 54)'
-                    ],
-                    hoverOffset: 4
-                }],
-
-            };
-            const config = {
-                type: 'pie',
-                data: data,
-                options: {
-                    responsive: true,
-                    plugins: {
-                        title: {
-                            display: true,
-                            text: 'Répartition du Secteur d\'Activité',
-                            fontSize: 18,
-                            fontColor: '#333'
-                        },
-                        legend: {
-                            display: true, // S'assurer que les légendes sont affichées
-                            position: 'right',
-                        }
-
-                    }
-                };
-
-                new Chart(
-                    cta,
-                    config
-                );
-        </script>
     </div>
     <div class="chart-description">
         <h2>Pie chart sur les parts</h2>
@@ -673,28 +503,138 @@
         </div>
     </section>
 
-
-
-
     <footer class="footer-bandes">
-
         <div class="band" style="background-color:#ff8c3a;"></div>
         <div class="band" style="background-color:#ff9f57;"></div>
         <div class="band" style="background-color:#ffb066;"></div>
         <div class="band" style="background-color:#ffc680;"></div>
         <div class="band" style="background-color:#ffd27f;"></div>
-        <div class="footercontent">
-            <hr>
-            <p> © 2025 Lili Colombain</p>
-            <a href="#"> revenir en haut de page</a>
-            <a href="index.html"><img src="icon.png" alt="notre icon"></a>
-        </div>
 
+        <div class="footer-content">
+            <p>© 2025 Lili Colombain</p>
+            <a href="#">Revenir en haut de page</a>
+            <a href="index.html"><img src="icon.png" alt="Logo"></a>
+        </div>
     </footer>
 
 
+    <script>
+        //Graphique
+        const labels = ['Juin - 2023', 'Septembre - 2023', 'Juin - 2024', 'Décembre - 2024'];
+        const levéesDeFonds = [105, 385, 600, 1700];
+        const valorisations = [240, 2000, 5800, 11700];
+
+        const maxValo = Math.max(...valorisations);
+        const suggestedMax = maxValo * 1.1;
+
+        const leveeDataset = {
+            label: "Levée de Fonds (€M)",
+            data: levéesDeFonds,
+            backgroundColor: 'rgba(0, 123, 255, 0.4)',
+            borderColor: 'rgb(0, 123, 255)',
+            borderWidth: 1
+        };
+
+        const valoDataset = {
+            label: "Valorisation (€M)",
+            data: valorisations,
+            backgroundColor: 'rgba(255, 159, 64, 0.4)',
+            borderColor: 'rgb(255, 159, 64)',
+            borderWidth: 1
+        };
+
+        const ctx = document.getElementById('myChartval');
+
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [leveeDataset, valoDataset]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        suggestedMax: suggestedMax,
+                        title: {
+                            display: true,
+                            text: 'Montant (€M)'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            maxRotation: 45,
+                            minRotation: 0
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Levées de Fonds vs Valorisation par date'
+                    },
+                    legend: {
+                        display: true
+                    },
+                    tooltip: {
+                        enabled: true
+                    }
+                }
+            }
+        });
+
+        //Gestion des bouton
+        const btnAll = document.getElementById('btn-all');
+        const btnLevee = document.getElementById('btn-levee');
+        const btnValo = document.getElementById('btn-valo');
+
+        function updateChart(showLevee, showValo, activeButton) {
+            myChart.data.datasets[0].hidden = !showLevee;
+            myChart.data.datasets[1].hidden = !showValo;
+
+            document.querySelectorAll('.boutons-container button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            activeButton.classList.add('active');
+
+            myChart.update();
+        }
+
+        btnAll.addEventListener('click', () => updateChart(true, true, btnAll));
+        btnLevee.addEventListener('click', () => updateChart(true, false, btnLevee));
+        btnValo.addEventListener('click', () => updateChart(false, true, btnValo));
 
 
+
+        //Scroll images
+        const container = document.querySelector('.horizontal-scroll');
+        const items = Array.from(document.querySelectorAll('.horizontal-scroll-item'));
+        let positions = [];
+
+        // initialiser les positions
+        let x = 0;
+        items.forEach(item => {
+            item.style.left = `${x}px`;
+            positions.push(x);
+            x += item.offsetWidth + 10; // +10px gap
+        });
+
+        function loopImages() {
+            items.forEach((item, i) => {
+                positions[i] -= 1; // vitesse du défilement
+                    if (positions[i] + item.offsetWidth < 0) {
+                        positions[i] = Math.max(...positions) + item.offsetWidth + 10;
+                    }
+                    item.style.left = positions[i] + 'px';
+                });
+
+            requestAnimationFrame(loopImages);
+        }
+
+        loopImages();
+    </script>
+    <script src="bootstrap/js/bootstrap.js"></script>
 </body>
 
 
