@@ -95,24 +95,41 @@ header {
 
 .bandeau-style {
   background-color: #ff9f40;
-  padding: 200px;
+  padding: 20px;
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
   margin-right: 60%;
   color: white;
   margin-top: 100px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.bandeau-style:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 .titre-bandeau {
   margin: 0;
   white-space: wrap;
   font-size: 2em;
+  margin-left: 30px;
+}
+
+@media (max-width: 700px) {
+  .bandeau-style {
+    margin-right: 15%;
+  }
+
+  .titre-bandeau {
+    margin-right: 0;
+  }
 }
 
 /* FRISE */
 
 .frise {
-  margin-top: 200px;
+  margin-top: 150px;
 }
 
 .horizontal-timeline .items {
@@ -140,10 +157,15 @@ header {
   top: 36px;
   left: 0;
   right: 0;
-  width: 75px;
+  width: 40%;
   margin: 0 auto;
   font-size: 0.9rem;
   padding-top: 8px;
+}
+
+.items ul {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (min-width: 1140px) {
@@ -167,6 +189,10 @@ header {
 .container-chart {
   width: 80%;
   margin: 50px auto;
+}
+
+.container-chart img {
+  border-radius: 8px;
 }
 
 .boutons-container {
@@ -202,8 +228,9 @@ header {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  max-width: 560px;
   margin: 20px;
+  transition: transform 0.5s ease-in-out;
 }
 
 .monstyle {
@@ -224,12 +251,133 @@ header {
   max-width: 1300px;
   margin: 50px auto;
   padding: 20px;
-  gap: 100px;
+  gap: 50px;
+  margin-top: 10px;
+}
+
+.cont2 {
+  margin-top: 0;
+}
+
+@media (max-width:700px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .chart-description {
+    width: 100%;
+    background-color: rgb(247, 193, 128);
+    border-radius: 5px;
+    margin: 50px;
+    padding: 20px;
+  }
 }
 
 
 /* PARTIE 2 */
 
+
+/* grid */
+.partenaires-section {
+  position: relative;
+  padding: 80px 0;
+  /* Couleur de fond légèrement jaunie */
+  background-color: #fff7ea;
+
+  max-height: 550px;
+  /* Centrage du texte et du contenu principal */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  /* Empêche les logos tournés de créer des barres de défilement */
+}
+
+/* Effet de papier quadrillé (le "pattern" en arrière-plan) */
+.background-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  /* Pour que le quadrillage soit léger */
+  /* Création du motif avec un dégradé répétitif */
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 25px 25px;
+  /* Taille des carrés du quadrillage */
+  z-index: 0;
+}
+
+.content-container {
+  position: relative;
+  z-index: 10;
+  max-width: 1500px;
+
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.description {
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+  color: #555;
+  font-size: 1.1em;
+}
+
+
+.logo-card {
+  width: 150px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Ligne très fine pour délimiter */
+  padding: 10px;
+}
+
+.logo-card img {
+  max-width: 100%;
+  max-height: 100%;
+
+  /* 1. État Initial : Gris et moins opaque */
+  filter: grayscale(100%);
+  opacity: 0.7;
+
+  /* 2. Transition fluide pour l'effet de couleur/opacité */
+  transition: filter 0.5s ease, opacity 0.5s ease;
+}
+
+.logo-card:hover img {
+  /* 3. État au Survol : Couleur et pleine opacité */
+  filter: grayscale(0%);
+  opacity: 1;
+  /* (Optionnel) Ajout d'une ombre douce pour le "pop-out" */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.range {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  flex-direction: row;
+}
+
+.range2 {
+  margin-top: 35px;
+}
+
+.range3 {
+  margin-top: -35px;
+}
 
 .constellation-container {
   width: 100%;
@@ -281,7 +429,58 @@ header {
   background-color: orange;
 }
 
+.horizontal-scroll {
+  display: flex;
+  height: 200px;
+  gap: 100px;
+  width: fit-content;
+  margin-top: 50px;
+}
 
+.horizontal-scroll-item {
+  height: 100%;
+  width: 464px;
+  background-size: cover;
+  animation-duration: 5s;
+  animation-name: infiniteScroll;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  
+}
+
+@keyframes infiniteScroll {
+  from {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(calc(0px - 50% - 50px));
+  }
+}
+
+.item-1 {
+  background-image: url("../brave.png");
+}
+
+.item-2 {
+  background-image: url("../brave.png");
+}
+
+.item-3 {
+  background-image: url("../brave.png");
+}
+
+.item-4 {
+  background-image: url("../brave.png");
+}
+
+.item-5 {
+  background-image: url("../brave.png");
+}
+
+.piechart{
+  margin-top: 100px;
+}
 /* CONCLUSION */
 
 
