@@ -154,9 +154,9 @@ p {
     }
 
     h3 {
-      color: #edaf52;
+      color: #F45D05;
       font-size: 1.4em;
-      border-left: 4px solid#edaf52;
+      border-left: 4px solid#F45D05;
       padding-left: 10px;
     }
 
@@ -164,7 +164,7 @@ p {
       padding: 1em 1.5em;
       border-radius: 10px;
       margin: 1em 0;
-      border-left: 4px solid #edaf52 ;
+      border-left: 4px solid #F45D05 ;
     }
 
     .data p {
@@ -185,7 +185,7 @@ p {
 .text p:first-of-type {
   font-size: 1rem;
   font-weight: bold;
-  color: #e47a2e; 
+  color: #F45D05; 
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -399,9 +399,9 @@ body {
 }
 
 
-.bg-co2 { background: linear-gradient(90deg,#ffb066,#ff8c3a); border-right:2px solid #ffb066; }
+.bg-co2 { background: linear-gradient(90deg,#F45D05,#F45D05); border-right:2px solid #F45D05; }
 .bg-water { background: linear-gradient(90deg,#86f0bf,#34d399); border-right:2px solid #86f0bf; }
-.bg-energy{ background: linear-gradient(90deg,#ffd27f,#ffb347); border-right:2px solid #ffd27f; }
+.bg-energy{ background: linear-gradient(90deg,#F45D05,#F45D05); border-right:2px solid #F45D05; }
 
 
 .footnote {
