@@ -374,28 +374,60 @@ footer {
     background-color: orange;
 }
 
+.container-chart {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.myChartlevee {
+    /* Définit une hauteur pour le conteneur du graphique */
+    height: 400px;
+}
+
+.boutons-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.boutons-container button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    background-color: #ff9f40;
+    color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: solid 4px #a4322a;
+}
+
+.boutons-container button:hover,
+.boutons-container button.active {
+    background-color: #ff9f40;
+    /* Couleur hover/active (similaire à votre orange) */
+    color: #a4322a;
+    border-color: #ff9f40;
+}
+
 .myChartlevee {
     background-color: rgb(255, 255, 255);
-    max-width: 900px;
+
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     max-width: 600px;
     margin: 20px;
-
-    
-
-   
 }
 
 .monstyle {
     width: 600px;
-    height: 400px;
+    height: 500px;
 }
 
 .myChartlevee:hover {
     transform: scale(1.02);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }

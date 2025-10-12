@@ -178,93 +178,154 @@
                 commodo at
                 ligula eget, congue mattis libero. Maecenas mollis,</p>
         </div>
-        <div class="monstyle">
-            <div class="myChartlevee"><canvas id="myChartlevee"></canvas></div></canvas>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-            <script>
-                const ctx = document.getElementById('myChartlevee');
+        <div class="container container-chart">
+            <div class="monstyle">
 
-                new Chart(ctx, {
+                <div class="myChartlevee">
+                    <canvas id="myChartval"></canvas>
+                </div>
+
+                <div class="boutons-container">
+                    <button id="btn-all" class="active">Comparaison</button>
+                    <button id="btn-levee">Levée seulement</button>
+                    <button id="btn-valo">Valorisation seulement</button>
+                </div>
+
+            </div>
+
+            <script>
+                // données
+                const labels = ['Juin - 2023', 'Septembre - 2023', 'Juin - 2024', 'Décembre - 2024'];
+                const levéesDeFonds = [105, 385, 600, 1700];
+                const valorisations = [240, 2000, 5800, 11700];
+
+                // valeur mal pour fixer echelle y
+                const maxValo = Math.max(...valorisations);
+                const suggestedMax = maxValo * 1.1;
+
+
+                const leveeDataset = {
+                    label: "Levée de Fonds (€M)",
+                    data: levéesDeFonds,
+                    borderWidth: 1,
+                    // Votre esthétique pour les Levées de Fonds
+                    backgroundColor: 'rgba(0, 123, 255, 0.2)',
+                    borderColor: 'rgb(0, 123, 255)',
+                    hoverBackgroundColor: 'rgba(0, 123, 255, 1)',
+
+                    hidden: false
+                };
+
+
+                const valoDataset = {
+                    label: "Valorisation (€M)",
+                    data: valorisations,
+                    borderWidth: 1,
+                    backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                    borderColor: 'rgb(255, 159, 64)',
+                    hoverBackgroundColor: 'rgba(255, 159, 64, 1)',
+
+                    hidden: false
+                };
+
+
+                // Ini graphique
+                const cty = document.getElementById('myChartval').getContext('2d');
+                const myChart = new Chart(cty, {
                     type: 'bar',
                     data: {
-                        labels: ['Juin - 2023', 'Septembre - 2023', 'Juin - 2024', 'Décembre - 2024'],
-                        datasets: [{
-                            label: "# Levées de fonds en million d'euros",
-                            data: [105, 385, 600, 1700],
-                            borderWidth: 1,
-                            backgroundColor: 'rgba(255, 159, 64, 0.2)',
-                            borderColor: 'rgb(255, 159, 64)',
-                            hoverBackgroundColor: 'rgba(255, 159, 64, 1)',
-                        }]
+                        labels: labels,
+                        datasets: [leveeDataset, valoDataset]
                     },
                     options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
                         scales: {
-                            y: [{
+                            yAxes: [{
                                 ticks: {
-                                    beginAtZero: true
+                                    beginAtZero: true,
+                                    suggestedMax: suggestedMax
+                                },
+                                scaleLabel: {
+                                    display: true,
+                                    labelString: 'Montant (€M)'
                                 }
+                            }],
+                            xAxes: [{
+                                barPercentage: 0.8,
+                                categoryPercentage: 0.8
                             }]
+                        },
+                        legend: {
+                            display: true
+                        },
+                        tooltips: {
+                            mode: 'index',
+                            intersect: false,
                         },
                         title: {
                             display: true,
-                            text: 'Montant des Levées de Fonds par Date',
+                            text: 'Levées de Fonds vs. Valorisation par date',
                             fontSize: 18,
                             fontStyle: 'bold',
                             fontColor: '#333'
+                        },
+                        tooltips: {
+                            position: 'nearest',
+                            borderWidth: 1,
+                            backgroundColor: 'rgb(0,0,0,0.4)',
+                            borderColor: 'rgb(255,255,255)'
                         }
                     }
                 });
-            </script>
 
+
+                // pour que ça marche avec les boutons
+                const btnAll = document.getElementById('btn-all');
+                const btnLevee = document.getElementById('btn-levee');
+                const btnValo = document.getElementById('btn-valo');
+
+
+                function updateChart(showLevee, showValo, activeButton) {
+
+                    myChart.data.datasets[0].hidden = !showLevee;
+                    myChart.data.datasets[1].hidden = !showValo;
+
+
+                    document.querySelectorAll('.boutons-container button').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    activeButton.classList.add('active');
+
+
+                    myChart.update();
+                }
+
+
+                btnAll.addEventListener('click', () => {
+                    updateChart(true, true, btnAll);
+                });
+
+                btnLevee.addEventListener('click', () => {
+                    updateChart(true, false, btnLevee);
+                });
+
+                btnValo.addEventListener('click', () => {
+                    updateChart(false, true, btnValo);
+                });
+            </script>
 
 
         </div>
+
+        
     </div>
-
-    <div class="container container-chart">
-        <div class="monstyle">
-            <div class="myChartlevee"><canvas id="myChartval"></canvas></div></canvas>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-            <script>
-                const cty = document.getElementById('myChartval');
-
-                new Chart(cty, {
-                    type: 'bar',
-                    data: {
-                        labels: ['Juin - 2023', 'Septembre - 2023', 'Juin - 2024', 'Décembre - 2024'],
-                        datasets: [{
-                            label: "# LValorisation en million d'euros",
-                            data: [240, 2000, 5800, 11700],
-                            borderWidth: 1,
-                            backgroundColor: 'rgba(255, 159, 64, 0.2)',
-                            borderColor: 'rgb(255, 159, 64)',
-                            hoverBackgroundColor: 'rgba(255, 159, 64, 1)',
-                        }]
-                    },
-                    options: {
-                        scales: {
-                            y: [{
-                                ticks: {
-                                    beginAtZero: true
-                                }
-                            }]
-                        },
-                        title: {
-                            display: true,
-                            text: 'Montant des Levées de Fonds par Date',
-                            fontSize: 18,
-                            fontStyle: 'bold',
-                            fontColor: '#333'
-                        }
-                    }
-                });
-            </script>
-
-
-
+    <div class="container">
+        <div class="container container-chart">
+            <img src="imageplace.png">
         </div>
         <div class="chart-description">
-            <h2>Ainsi qu'une valorisation phénoménale</h2>
+            <h2>Des levées de fonds toujours plus importantes</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi mauris, pulvinar quis porta ut, malesuada
                 sed
                 tellus. Phasellus sapien nulla, egestas et felis sit amet, fermentum ornare augue. In risus nisl,
@@ -297,13 +358,15 @@
     <div class="container">
         <div class="text-block">
             <h1>Blablabla</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi mauris, pulvinar quis porta ut, malesuada
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi mauris, pulvinar quis porta ut,
+                malesuada
                 sed
                 tellus.</p>
         </div>
         <p class="number">85%</p>
         <div class="text-block">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi mauris, pulvinar quis porta ut, malesuada
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi mauris, pulvinar quis porta ut,
+                malesuada
                 sed
                 tellus.</p>
         </div>
@@ -319,7 +382,8 @@
         </div>
         <div class="chart-description">
             <h2>Pie chart sur les parts</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi mauris, pulvinar quis porta ut, malesuada
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi mauris, pulvinar quis porta ut,
+                malesuada
                 sed
                 tellus. Phasellus sapien nulla, egestas et felis sit amet, fermentum ornare augue. In risus nisl,
                 commodo at
