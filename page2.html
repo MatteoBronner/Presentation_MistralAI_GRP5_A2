@@ -176,12 +176,7 @@
                 d'euros (série B). Au total, Mistral a levé 2.79 milliards d'euros en seulement 3 ans, un record pour
                 une startup française.
                 Les valorisations, quant à elles, ont grandement augmenté, ce qui s'explique notamment avec :</p>
-            <ul>
-                <li>L’adoption massive et rapide de ses modèles en open source.</li>
-                <li>La signature de partenariats industriels stratégiques majeurs, notamment avec ASML.</li>
-                <li>Un positionnement unique qui renforce l'autonomie et la souveraineté technologique européenne.
-                </li>
-            </ul>
+
 
         </div>
         <div class="container container-chart">
@@ -199,12 +194,136 @@
 
             </div>
 
+            <script>
+                // données
+                const labels = ['Juin - 2023', 'Septembre - 2023', 'Juin - 2024', 'Décembre - 2024'];
+                const levéesDeFonds = [105, 385, 600, 1700];
+                const valorisations = [240, 2000, 5800, 11700];
+
+                // valeur mal pour fixer echelle y
+                const maxValo = Math.max(...valorisations);
+                const suggestedMax = maxValo * 1.1;
+
+
+                const leveeDataset = {
+                    label: "Levée de Fonds (€M)",
+                    data: levéesDeFonds,
+                    borderWidth: 1,
+                    // Votre esthétique pour les Levées de Fonds
+                    backgroundColor: 'rgba(0, 123, 255, 0.2)',
+                    borderColor: 'rgb(0, 123, 255)',
+                    hoverBackgroundColor: 'rgba(0, 123, 255, 1)',
+
+                    hidden: false
+                };
+
+
+                const valoDataset = {
+                    label: "Valorisation (€M)",
+                    data: valorisations,
+                    borderWidth: 1,
+                    backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                    borderColor: 'rgb(255, 159, 64)',
+                    hoverBackgroundColor: 'rgba(255, 159, 64, 1)',
+
+                    hidden: false
+                };
+
+
+                // Ini graphique
+                const cty = document.getElementById('myChartval').getContext('2d');
+                const myChart = new Chart(cty, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [leveeDataset, valoDataset]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true,
+                                    suggestedMax: suggestedMax
+                                },
+                                scaleLabel: {
+                                    display: true,
+                                    labelString: 'Montant (€M)'
+                                }
+                            }],
+                            xAxes: [{
+                                barPercentage: 0.8,
+                                categoryPercentage: 0.8
+                            }]
+                        },
+                        legend: {
+                            display: true
+                        },
+                        tooltips: {
+                            mode: 'index',
+                            intersect: false,
+                        },
+                        title: {
+                            display: true,
+                            text: 'Levées de Fonds vs. Valorisation par date',
+                            fontSize: 18,
+                            fontStyle: 'bold',
+                            fontColor: '#333'
+                        },
+                        tooltips: {
+                            position: 'nearest',
+                            borderWidth: 1,
+                            backgroundColor: 'rgb(0,0,0,0.4)',
+                            borderColor: 'rgb(255,255,255)'
+                        }
+                    }
+                });
+
+
+                // pour que ça marche avec les boutons
+                const btnAll = document.getElementById('btn-all');
+                const btnLevee = document.getElementById('btn-levee');
+                const btnValo = document.getElementById('btn-valo');
+
+
+                function updateChart(showLevee, showValo, activeButton) {
+
+                    myChart.data.datasets[0].hidden = !showLevee;
+                    myChart.data.datasets[1].hidden = !showValo;
+
+
+                    document.querySelectorAll('.boutons-container button').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    activeButton.classList.add('active');
+
+
+                    myChart.update();
+                }
+
+
+                btnAll.addEventListener('click', () => {
+                    updateChart(true, true, btnAll);
+                });
+
+                btnLevee.addEventListener('click', () => {
+                    updateChart(true, false, btnLevee);
+                });
+
+                btnValo.addEventListener('click', () => {
+                    updateChart(false, true, btnValo);
+                });
+            </script>
+
+
         </div>
 
 
     </div>
 
-    <div class="container ">
+    <div class="container">
+
         <div class="monstyle">
             <div class="myChartlevee" style="height: 400px; width: 100%;">
                 <canvas id="myChartComparaison"></canvas>
@@ -311,19 +430,22 @@
                 }
             });
         </script>
-    
-    <div class="chart-description">
-        <h2>Le Financement Stratégique de Mistral AI : L'Équilibre entre Innovation et Souveraineté</h2>
-        <p>
-            Les levées de fonds de Mistral AI ne sont pas seulement remarquables par leurs montants records, mais
-            surtout par la qualité et la nature de ses investisseurs. Contrairement à ses concurrents, la pépite
-            française se démarque par un modèle de financement qui privilégie les partenariats industriels et
-            technologiques pour garantir son indépendance et accélérer son déploiement sur des marchés stratégiques.
-        </p>
-    </div>
+
+
+        <div class="chart-description">
+            <h2>Le Financement Stratégique de Mistral AI : L'Équilibre entre Innovation et Souveraineté</h2>
+            <p>
+                Les levées de fonds de Mistral AI ne sont pas seulement remarquables par leurs montants records, mais
+                surtout par la qualité et la nature de ses investisseurs. Contrairement à ses concurrents, la pépite
+                française se démarque par un modèle de financement qui privilégie les partenariats industriels et
+                technologiques pour garantir son indépendance et accélérer son déploiement sur des marchés stratégiques.
+            </p>
+        </div>
     </div>
 
-    
+    <div class="bandeau-style v2">
+        <h2 class="titre-bandeau">Des partenaires et investisseurs essentiels</h2>
+    </div>
     <!-- Partie Partenaires -->
 
     <section class="partenaires-section">
@@ -334,17 +456,17 @@
             <div class="logos-grid">
                 <div class="range">
                     <div class="logo-card logo-1">
-                        <img src="brave.png" alt="Azure AI">
+                        <img src="style/images/AFP.png" alt="Azure AI">
                     </div>
                     <div class="logo-card logo-2 range3">
                         <img src="brave.png" alt="Lion">
                     </div>
 
                     <div class="logo-card logo-3 range3">
-                        <img src="brave.png" alt="AWS">
+                        <img src="style/images/ASML.png" alt="AWS">
                     </div>
                     <div class="logo-card logo-4 ">
-                        <img src="brave.png" alt="Snowflake">
+                        <img src="style/images/AZURE.png" alt="Snowflake">
                     </div>
                 </div>
                 <h1>Nos Partenaires.</h1>
@@ -354,23 +476,23 @@
                 </p>
                 <div class="range">
                     <div class="logo-card logo-5">
-                        <img src="brave.png" alt="Google Cloud">
+                        <img src="style/images/CMACGM.png" alt="Google Cloud">
                     </div>
                     <div class="logo-card logo-6 range2">
-                        <img src="brave.png" alt="IBM">
+                        <img src="style/images/NVIDIA.png" alt="IBM">
                     </div>
                     <div class="logo-card logo-7 range2">
-                        <img src="brave.png" alt="Continue">
+                        <img src="style/images/bnp.png" alt="Continue">
                     </div>
                     <div class="logo-card logo-8">
-                        <img src="brave.png" alt="SAP">
+                        <img src="style/images/sopra.png" alt="SAP">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
+    <!--
     <div class="container">
         <div class="text-block">
             <h1>Blablabla</h1>
@@ -401,28 +523,8 @@
         <div class="horizontal-scroll-item item-4"></div>
         <div class="horizontal-scroll-item item-5"></div>
     </div>
+    -->
 
-    <div class="container explication">
-        <h2>Ces nombeux partenaires sont essentiels pour mistral</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi mauris, pulvinar quis porta ut,
-            malesuada
-            sed
-            tellus. Phasellus sapien nulla, egestas et felis sit amet, fermentum ornare augue. In risus nisl,
-            commodo at
-            ligula eget, congue mattis libero. Maecenas mollis,Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed mi mauris, pulvinar quis porta ut,
-            malesuada
-            sed
-            tellus. Phasellus sapien nulla, egestas et felis sit amet, fermentum ornare augue. In risus nisl,
-            commodo at
-            ligula eget, congue mattis libero. Maecenas mollis,Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed mi mauris, pulvinar quis porta ut,
-            malesuada
-            sed
-            tellus. Phasellus sapien nulla, egestas et felis sit amet, fermentum ornare augue. In risus nisl,
-            commodo at
-            ligula eget, congue mattis libero. Maecenas mollis,</p>
-    </div>
     <div class="container container-chart">
 
         <div class="monstyle">
@@ -431,6 +533,80 @@
                 <canvas id="myPieChart"></canvas>
             </div>
         </div>
+
+        <script>
+            // --- 1. Récupération du CONTEXTE 2D (c'est l'étape cruciale) ---
+            const canvasElement = document.getElementById('myPieChart');
+            // On obtient le contexte 2D du canvas
+            const ctx = canvasElement.getContext('2d');
+
+            const data = {
+                labels: [
+                    'Secteur financier et bancaire',
+                    'Industrie et logistique',
+                    'Secteur public et santé',
+                    'Retail et e-commerce'
+                ],
+                datasets: [{
+                    label: 'Répartition du marché (%)',
+                    data: [26, 42, 21, 11], // Total : 100
+                    backgroundColor: [
+                        'rgb(181, 38, 38)',
+                        'rgb(42, 62, 161)',
+                        'rgb(161, 94, 196)',
+                        'rgb(63, 160, 54)'
+                    ],
+                    hoverOffset: 4
+                }],
+
+            };
+
+            // --- 2. Configuration du graphique ---
+            const config = {
+                type: 'pie',
+                data: data,
+                // Si vous utilisez Chart.js v3.x ou plus :
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Répartition du Secteur d\'Activité',
+                            font: {
+                                size: 18, // Utiliser font.size pour v3+
+                            },
+                            color: '#333' // Utiliser 'color' au lieu de 'fontColor' pour v3+
+                        },
+                        legend: {
+                            display: true,
+                            position: 'right',
+                        }
+                    }
+                }
+                /*
+                // Si vous utilisez Chart.js v2.x (votre syntaxe d'options était un mélange) :
+                options: {
+                    responsive: true,
+                    title: {
+                        display: true,
+                        text: 'Répartition du Secteur d\'Activité',
+                        fontSize: 18,
+                        fontColor: '#333'
+                    },
+                    legend: {
+                        display: true,
+                        position: 'right',
+                    }
+                }
+                */
+            };
+
+            // --- 3. Initialisation du graphique avec le CONTEXTE ---
+            new Chart(
+                ctx, // <-- CORRECTION : On passe le contexte 2D (ctx) ici !
+                config
+            );
+        </script>
     </div>
     <div class="chart-description">
         <h2>Pie chart sur les parts</h2>
@@ -443,8 +619,25 @@
     </div>
     </div>
 
+    <div class="container ">
+        <div class="container-chart">
+            <h2>L'Avantage Compétitif de Mistral AI</h2>
+            <p>Mistral AI se positionne ainsi à l'intersection d'une croissance ultrarapide et d'une transparence (grâce
+                à
+                son approche open-source), ce qui représente un atout décisif pour les grandes entreprises et les
+                administrations européennes.
 
-    <!-- Carousel de conclusion -->
+                En misant sur des alliances avec des leaders industriels (comme l'accord majeur avec ASML pour les
+                semi-conducteurs), Mistral AI ne cherche pas une simple injection de capital, mais une intégration
+                complète
+                dans la chaîne de valeur numérique. Cette stratégie est un gage d'indépendance et conforte son rôle de
+                champion européen, offrant une alternative crédible et souveraine face à la domination des géants
+                américains.</p>
+        </div>
+    </div>
+
+
+    // <!-- Carousel de conclusion -->
 
 
     <section class="carousel1">
@@ -503,138 +696,28 @@
         </div>
     </section>
 
+
+
+
     <footer class="footer-bandes">
+
         <div class="band" style="background-color:#ff8c3a;"></div>
         <div class="band" style="background-color:#ff9f57;"></div>
         <div class="band" style="background-color:#ffb066;"></div>
         <div class="band" style="background-color:#ffc680;"></div>
         <div class="band" style="background-color:#ffd27f;"></div>
-
-        <div class="footer-content">
-            <p>© 2025 Lili Colombain</p>
-            <a href="#">Revenir en haut de page</a>
-            <a href="index.html"><img src="icon.png" alt="Logo"></a>
+        <div class="footercontent">
+            <hr>
+            <p> © 2025 Lili Colombain</p>
+            <a href="#"> revenir en haut de page</a>
+            <a href="index.html"><img src="icon.png" alt="notre icon"></a>
         </div>
+
     </footer>
 
 
-    <script>
-        //Graphique
-        const labels = ['Juin - 2023', 'Septembre - 2023', 'Juin - 2024', 'Décembre - 2024'];
-        const levéesDeFonds = [105, 385, 600, 1700];
-        const valorisations = [240, 2000, 5800, 11700];
-
-        const maxValo = Math.max(...valorisations);
-        const suggestedMax = maxValo * 1.1;
-
-        const leveeDataset = {
-            label: "Levée de Fonds (€M)",
-            data: levéesDeFonds,
-            backgroundColor: 'rgba(0, 123, 255, 0.4)',
-            borderColor: 'rgb(0, 123, 255)',
-            borderWidth: 1
-        };
-
-        const valoDataset = {
-            label: "Valorisation (€M)",
-            data: valorisations,
-            backgroundColor: 'rgba(255, 159, 64, 0.4)',
-            borderColor: 'rgb(255, 159, 64)',
-            borderWidth: 1
-        };
-
-        const ctx = document.getElementById('myChartval');
-
-        const myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: labels,
-                datasets: [leveeDataset, valoDataset]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        suggestedMax: suggestedMax,
-                        title: {
-                            display: true,
-                            text: 'Montant (€M)'
-                        }
-                    },
-                    x: {
-                        ticks: {
-                            maxRotation: 45,
-                            minRotation: 0
-                        }
-                    }
-                },
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Levées de Fonds vs Valorisation par date'
-                    },
-                    legend: {
-                        display: true
-                    },
-                    tooltip: {
-                        enabled: true
-                    }
-                }
-            }
-        });
-
-        //Gestion des bouton
-        const btnAll = document.getElementById('btn-all');
-        const btnLevee = document.getElementById('btn-levee');
-        const btnValo = document.getElementById('btn-valo');
-
-        function updateChart(showLevee, showValo, activeButton) {
-            myChart.data.datasets[0].hidden = !showLevee;
-            myChart.data.datasets[1].hidden = !showValo;
-
-            document.querySelectorAll('.boutons-container button').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            activeButton.classList.add('active');
-
-            myChart.update();
-        }
-
-        btnAll.addEventListener('click', () => updateChart(true, true, btnAll));
-        btnLevee.addEventListener('click', () => updateChart(true, false, btnLevee));
-        btnValo.addEventListener('click', () => updateChart(false, true, btnValo));
 
 
-
-        //Scroll images
-        const container = document.querySelector('.horizontal-scroll');
-        const items = Array.from(document.querySelectorAll('.horizontal-scroll-item'));
-        let positions = [];
-
-        // initialiser les positions
-        let x = 0;
-        items.forEach(item => {
-            item.style.left = `${x}px`;
-            positions.push(x);
-            x += item.offsetWidth + 10; // +10px gap
-        });
-
-        function loopImages() {
-            items.forEach((item, i) => {
-                positions[i] -= 1; // vitesse du défilement
-                    if (positions[i] + item.offsetWidth < 0) {
-                        positions[i] = Math.max(...positions) + item.offsetWidth + 10;
-                    }
-                    item.style.left = positions[i] + 'px';
-                });
-
-            requestAnimationFrame(loopImages);
-        }
-
-        loopImages();
-    </script>
-    <script src="bootstrap/js/bootstrap.js"></script>
 </body>
 
 
