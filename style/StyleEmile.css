@@ -268,3 +268,227 @@ footer {
     width: 28px;
   }
 }
+
+
+/* ===== Produits & Technologies ===== */
+.product-tech-grid {
+    margin-bottom: 40px;
+}
+
+.tech-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #ff8c3a;
+    height: 100%;
+}
+
+.tech-card h3 {
+    color: #f45d05;
+    margin-top: 0;
+}
+
+.tech-card h3 i {
+    margin-right: 10px;
+}
+
+.tech-card .badge {
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+/* ===== Comparaison Concurrentielle ===== */
+.competitor-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.competitor-card.mistral { border-left: 4px solid #ff8c3a; }
+.competitor-card.openai { border-left: 4px solid #4285f4; }
+.competitor-card.google { border-left: 4px solid #34a853; }
+.competitor-card.aleph { border-left: 4px solid #0066cc; }
+.competitor-card.deepseek { border-left: 4px solid #ea4335; }
+
+.competitor-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.competitor-card h3 {
+    color: #f45d05;
+    margin: 0;
+}
+
+.competitor-card h3 i {
+    margin-right: 8px;
+}
+
+.competitor-card .badge {
+    font-size: 0.8rem;
+}
+
+.competitor-card .badge.bg-europe {
+    background-color: #0066cc;
+}
+
+.competitor-card .badge.bg-usa {
+    background-color: #4285f4;
+}
+
+.competitor-card .badge.bg-china {
+    background-color: #ea4335;
+}
+
+.competitor-card ul {
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+.competitor-card li {
+    list-style: none;
+    padding: 4px 0;
+    font-size: 0.9rem;
+}
+
+.strengths, .weaknesses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+/* ===== Analyse SWOT ===== */
+.swot-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    height: 100%;
+}
+
+.swot-card.strength { border-left: 4px solid #28a745; }
+.swot-card.weakness { border-left: 4px solid #dc3545; }
+.swot-card.opportunity { border-left: 4px solid #007bff; }
+.swot-card.threat { border-left: 4px solid #ffc107; }
+
+.swot-card h3 {
+    color: #f45d05;
+    margin-top: 0;
+}
+
+.swot-card h3 i {
+    margin-right: 10px;
+}
+
+.swot-item {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: flex-start;
+}
+
+.swot-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #ff8c3a;
+}
+
+.swot-item h4 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.swot-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ===== Projection à 5 Ans ===== */
+.projection-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    text-align: center;
+}
+
+.projection-card.optimistic { border-left: 4px solid #28a745; }
+.projection-card.realistic { border-left: 4px solid #ff8c3a; }
+.projection-card.pessimistic { border-left: 4px solid #dc3545; }
+
+.projection-card h3 {
+    color: #f45d05;
+    margin-top: 0;
+}
+
+.projection-card h3 i {
+    margin-right: 10px;
+}
+
+.projection-card ul {
+    padding-left: 0;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.projection-card li {
+    list-style: none;
+    padding: 5px 0;
+    font-size: 0.9rem;
+}
+
+.projection-visual {
+    margin: 20px 0;
+    height: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.projection-visual .bar {
+    height: 100%;
+    background: #ff8c3a;
+    border-radius: 10px;
+}
+
+.factor-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    height: 100%;
+}
+
+.factor-icon {
+    font-size: 2rem;
+    color: #ff8c3a;
+    margin-bottom: 10px;
+}
+
+.factor-card h4 {
+    color: #f45d05;
+    margin-bottom: 10px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .swot-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .swot-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
