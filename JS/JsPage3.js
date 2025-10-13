@@ -84,10 +84,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const radius = 90;
 
     const data = [
-        { label: 'Mistral AI', value: 26, color: '#f45d05' },
-        { label: 'Aleph Alpha', value: 42, color: '#ff8c3a' },
-        { label: 'Hugging Face', value: 21, color: '#ffb066' },
-        { label: 'DeepL', value: 11, color: '#ffc680' }
+        { label: 'Mistral AI', value: 26, color: '#f40505' },
+        { label: 'Aleph Alpha', value: 42, color: '#3a82ff' },
+        { label: 'Hugging Face', value: 21, color: '#62ee79' },
+        { label: 'DeepL', value: 11, color: '#ffee80' }
     ];
 
     let startAngle = 0;
