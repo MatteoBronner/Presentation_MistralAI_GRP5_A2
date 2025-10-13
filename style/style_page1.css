@@ -198,9 +198,9 @@ p {
   padding: 10px;
 
  
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   color:#4a2c00;
-
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 0.95rem;
