@@ -194,6 +194,9 @@
 
             </div>
 
+
+
+
             <script>
 
                 const labels = ['Juin - 2023', 'Septembre - 2023', 'Juin - 2024', 'Décembre - 2024'];
@@ -328,8 +331,8 @@
         <script>
 
             const labels2 = ['OpenAI', 'Anthropic', 'Mistral AI'];
-            const leveeDeFonds = [10.2, 0.65, 2.79]; 
-            const valorisations2 = [74.4, 4.65, 11.7]; 
+            const leveeDeFonds = [10.2, 0.65, 2.79];
+            const valorisations2 = [74.4, 4.65, 11.7];
 
             const maxValo2 = Math.max(...valorisations2);
             const suggestedMax2 = maxValo2 * 1.1;
@@ -425,7 +428,7 @@
         </div>
     </div>
 
-    
+
     <!-- Partie Partenaires -->
 
     <section class="partenaires-section">
@@ -510,62 +513,33 @@
         <div class="monstyle">
 
             <div class="myChartlevee">
-                <canvas id="myPieChart"></canvas>
+                <div class="graph-container">
+                    <h4>Parts de marché en Europe (2025)</h4>
+                    <canvas id="pieChart2" width="200" height="200"></canvas>
+                    <div class="pie-legend">
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #f45d05;"></span>
+                            Secteur financier et bancaire
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #ff8c3a;"></span>
+                            Industrie et logistique
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #ffb066;"></span>
+                            Secteur public et santé
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #ffc680;"></span>
+                            Retail et e-commerce
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <script>
-            const canvasElement = document.getElementById('myPieChart');
-            const ctx = canvasElement.getContext('2d');
 
-            const data = {
-                labels: [
-                    'Secteur financier et bancaire',
-                    'Industrie et logistique',
-                    'Secteur public et santé',
-                    'Retail et e-commerce'
-                ],
-                datasets: [{
-                    label: 'Répartition du marché (%)',
-                    data: [26, 42, 21, 11],
-                    backgroundColor: [
-                        'rgb(181, 38, 38)',
-                        'rgb(42, 62, 161)',
-                        'rgb(161, 94, 196)',
-                        'rgb(63, 160, 54)'
-                    ],
-                    hoverOffset: 4
-                }],
 
-            };
-
-            const config = {
-                type: 'pie',
-                data: data,
-                options: {
-                    responsive: true,
-                    plugins: {
-                        title: {
-                            display: true,
-                            text: 'Répartition du Secteur d\'Activité',
-                            font: {
-                                size: 18,
-                            },
-                            color: '#333' 
-                        },
-                        legend: {
-                            display: true,
-                            position: 'right',
-                        }
-                    }
-                }
-            };
-
-            new Chart(
-                ctx,
-                config
-            );
-        </script>
 
         <div class="chart-description">
             <h2>Pie chart sur les parts</h2>
@@ -595,8 +569,8 @@
         </div>
     </div>
 
-    
-     
+
+
     <!--
 
     <section class="carousel1">
@@ -673,5 +647,8 @@
         </div>
 
     </footer>
+    <script src="JS/JsPage3.js"></script>
+
 </body>
+
 </html>
