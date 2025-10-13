@@ -11,9 +11,10 @@ h1, h2, h3, .carousel-text h2, .progress-label {
   font-weight: 700;
 }
 
-p, .text p, .carousel-text p, .data p, .subtitle {
+p,pre, .text p, .carousel-text p, .data p, .subtitle {
   font-family: 'Inter', sans-serif;
   font-weight: 400; 
+  font-size: 400;
 }
 
 
@@ -251,7 +252,7 @@ p {
 
 .carousel-control-prev,
 .carousel-control-next {
-  top: 50%;
+  top: 60%;
   transform: translateY(-50%);
 }
 
