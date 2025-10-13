@@ -236,10 +236,8 @@ footer .footer-content {
   color: white;
 }
 
-footer .footer-content a,
-footer .footer-content p {
+footer .footer-content a {
   color: white;
-  text-decoration: none;
 }
 
 footer .footer-content a:hover {
