@@ -324,8 +324,8 @@ p {
 }
 
 .indexMenu a.active {
-  color: #ff8c3a;
-  border-left: 4px solid #ff8c3a;
+  color: #F45D05;
+  border-left: 4px solid #F45D05;
   padding-left: 6px;
 }
 
@@ -400,52 +400,4 @@ p {
 
 .card-img img:hover {
   transform: scale(1.05);
-}
-
-/* ----------------------------------------------*\
-|              Footer de Tié                      |
-\*---------------------------------------------- */
-
-footer.footer-bandes {
-  position: relative;
-  width: 100vw;
-  height: 200px;
-  left: 50%;
-  right: 0;
-  transform: translateX(-50%);
-  overflow: hidden;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: none;
-}
-
-footer .band {
-  width: 100%;
-  height: 20%;
-  display: block;
-}
-
-footer .footer-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-
-footer .footer-content a,
-footer .footer-content p {
-  color: white;
-  text-decoration: none;
-}
-
-footer .footer-content a:hover {
-  text-decoration: underline;
-}
-
-footer .footer-content img {
-  width: 35px;
-  vertical-align: middle;
 }

@@ -133,6 +133,11 @@ header {
   text-align: center;
 }
 
+.logoIndexFin {
+  width: 60%;
+  height: auto;
+}
+
 .IndexCartePage {
   text-align: center;
 }
@@ -229,9 +234,9 @@ footer .footer-content {
   color: white;
 }
 
+footer .footer-content p,
 footer .footer-content a {
   color: white;
-  text-decoration: underline;
 }
 
 footer .footer-content a:hover {
