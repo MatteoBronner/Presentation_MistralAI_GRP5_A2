@@ -98,7 +98,7 @@ p {
 .text p:first-of-type {
   font-size: 1rem;
   font-weight: bold;
-  color: #e47a2e; 
+  color: #F45D05; 
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -175,7 +175,7 @@ p {
 }
 
 .hiddenLink a:hover {
-  background-color: #ff8c3a;
+  background-color: #F45D05;
   color: white;
 }
 
@@ -241,7 +241,7 @@ p {
 
 .pin .material-symbols-outlined {
   font-size: 32px;
-  color: #ff6b3a;
+  color: #F45D05;
   text-shadow: 0 2px 4px rgba(0,0,0,0.4);
   transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -272,7 +272,7 @@ p {
 .tooltip h4 {
   margin: 0;
   font-size: 1rem;
-  color: #ff6b3a;
+  color: #F45D05;
 }
 
 .tooltip p {
@@ -372,7 +372,7 @@ p {
 }
 
 .card-text h3 {
-  color: #ff8c3a;
+  color: #F45D05;
   font-size: 1.8em;
   margin-bottom: 15px;
 }
