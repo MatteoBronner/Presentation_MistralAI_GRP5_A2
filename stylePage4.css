@@ -518,7 +518,7 @@ footer .footer-content img {
   .carousel-slide {
     flex-direction: column;
     text-align: center;
-    padding: 30px;
+    padding: 40px;
   }
 
   .carousel-slide img {
