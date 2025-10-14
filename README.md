@@ -101,7 +101,8 @@ Vérification W3C : [Détail ICI](https://validator.w3.org/nu/?doc=https%3A%2F%2
 
 ## Contributeurs
 
-![capture d'écran de sur la contribution des membres du projet](doc/livrable2_contributors.png)
+![capture d'écran de sur la contribution des membres du projet](doc/livrable2_contribuors.png)
+
 
 
 
