@@ -60,3 +60,49 @@ Enfin, nous avons créé une charte graphique pour notre site que vous pouvez re
 - Cap Emile
   - Page produit et concurrence
 
+## Développement Site Web et Validation des pages
+
+### Page d'accueil
+
+**Auteur : Bronner Matteo**  
+
+Vérification W3C : [Détail ICI](https://validator.w3.org/nu/?useragent=Validator.nu%2FLV+https%3A%2F%2Fvalidator.w3.org%2Fservices&acceptlanguage=&doc=https%3A%2F%2Fmatteobronner.github.io%2FPresentation_MistralAI_GRP5_A2%2Findex.html)
+
+
+![capture d'écran de la conformité de la page d'accueil](doc/capture_1_W3C.png)
+
+**Auteur : Bronner Matteo**  
+
+Vérification W3C : [Détail ICI](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmatteobronner.github.io%2FPresentation_MistralAI_GRP5_A2%2Fpage1.html)
+
+![capture d'écran de la conformité de la page 1](doc/capture_2_W3C.png)
+
+**Auteur : Colombain Lili** 
+
+Vérification W3C : [Détail ICI](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmatteobronner.github.io%2FPresentation_MistralAI_GRP5_A2%2Fpage2.html)
+
+![capture d'écran de la conformité de la page 2](doc/capture_3_W3C.png)
+
+**Auteur : Cap Emile**
+
+Vérification W3C : [Détail ICI](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmatteobronner.github.io%2FPresentation_MistralAI_GRP5_A2%2Fpage3.html)
+
+![capture d'écran de la conformité de la page 3](doc/capture_4_W3C.png)
+
+**Auteur : Hebie Tie Rachida**
+
+Vérification W3C : [Détail ICI](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmatteobronner.github.io%2FPresentation_MistralAI_GRP5_A2%2Fpage4.html)
+
+![capture d'écran de la conformité de la page 4](doc/capture_5_W3C.png)
+
+**Validation de l'écoconception :**
+
+![capture d'écran sur le site https://www.ecoindex.fr/ pour tester l'eco-conception](doc/capture_1_ecoconcept.png)
+
+## Contributeurs
+
+![capture d'écran de sur la contribution des membres du projet](doc/livrable2_contribuors.png)
+
+
+
+
