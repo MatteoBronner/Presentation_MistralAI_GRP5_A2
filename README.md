@@ -47,7 +47,7 @@ Enfin, nous avons créé une charte graphique pour notre site que vous pouvez re
 - Cap Emile
 
 
-### Développement site (en cours)
+### Développement site
 
 - Colombain Lili
   - Page économie
@@ -102,6 +102,7 @@ Vérification W3C : [Détail ICI](https://validator.w3.org/nu/?doc=https%3A%2F%2
 ## Contributeurs
 
 ![capture d'écran de sur la contribution des membres du projet](doc/livrable2_contribuors.png)
+
 
 
 
