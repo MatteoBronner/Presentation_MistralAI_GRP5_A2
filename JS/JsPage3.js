@@ -117,8 +117,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 const labels2 = ['OpenAI', 'Anthropic', 'Mistral AI'];
-const leveeDeFonds = [10.2, 0.65, 2.79];
-const valorisations2 = [74.4, 4.65, 11.7];
+const leveeDeFonds = [40, 13, 2.79];
+const valorisations2 = [300, 183, 11.7];
 
 const maxValo2 = Math.max(...valorisations2);
 const suggestedMax2 = maxValo2 * 1.1;
